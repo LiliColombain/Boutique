@@ -26,7 +26,6 @@ h1 {
     color: #d10000;
 }
 
-/* Structure générale */
 .King {
     display: flex;
     margin-top: 20px;
@@ -53,7 +52,6 @@ h1 {
     min-width: 0;
 }
 
-/* Style des cartes de produit */
 .block {
     background-color: var(--white);
     border-radius: 20px;
@@ -113,7 +111,6 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Boutons "Tester" et "Acheter" */
 .boutons-container {
     display: flex;
     justify-content: space-between;
@@ -150,7 +147,6 @@ h1 {
     background-color: #8b0000;
 }
 
-/* Description (apparaît au survol) */
 .descri {
     opacity: 0;
     max-height: 0;
@@ -166,7 +162,6 @@ h1 {
     margin-top: 10px;
 }
 
-/* Filtre et sidebar */
 .sidebar h3 {
     margin-top: 0;
     color: var(--gris);
@@ -192,7 +187,6 @@ h1 {
     background-color: var(--white);
 }
 
-/* Footer */
 footer {
     text-align: center;
     margin-top: 20px;
