@@ -22,6 +22,9 @@ fetch('/Js_Json/DataBoutique.json')
             const origine = document.createElement('p');
             origine.textContent = produit.origine;
 
+            const prix = document.createElement('p');
+            prix.textContent = produit.price;
+
             const boutonAudio = document.createElement('button');
             boutonAudio.textContent = "Tester";
             boutonAudio.className = "bouton-audio";
@@ -70,6 +73,7 @@ fetch('/Js_Json/DataBoutique.json')
             produitCarte.appendChild(nom);
             produitCarte.appendChild(origine);
             produitCarte.appendChild(boutonAudio);
+            produitCarte.appendChild(prix)
 
             zoneProduit.appendChild(produitCarte);
         }
@@ -79,7 +83,7 @@ fetch('/Js_Json/DataBoutique.json')
         muteBtn.addEventListener('click', () => {
             isMuted = !isMuted;
             audios.forEach(a => a.muted = isMuted);
-            muteBtn.textContent = isMuted ? "Couper le son" : "Activer le son";
+            muteBtn.textContent = isMuted ? "Off" : "On";
         });
 
         const filtreOrigine = document.getElementById('filtre-origine');

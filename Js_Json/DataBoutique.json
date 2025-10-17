@@ -5,7 +5,8 @@
         "image": "styles/Image/ImageDeSteak.jpg",
         "audio": "styles/Audio/VacheTest.ogg",
         "audioAchat": "styles/audio/VacheAchat.ogg",
-        "description": "Un bon petit steak de boeuf de france, qualité AAA"
+        "description": "Un bon petit steak de boeuf de france, qualité AAA",
+        "price": "10$"
     },
     "skin2": {
         "name": "saucisse",
@@ -13,7 +14,29 @@
         "image": "styles/Image/saucisse.jpg",
         "audio": "styles/Audio/CochonTester.ogg",
         "audioAchat": "styles/audio/CochonAcheter.mp3",
-        "description": "Une saucisse basic quoi"
+        "description": "Une saucisse basic quoi",
+        "price": "10$"
+
+
+    },
+    "skin3": {
+        "name": "Steak",
+        "origine": "Boeuf",
+        "image": "styles/Image/ImageDeSteak.jpg",
+        "audio": "styles/Audio/VacheTest.ogg",
+        "audioAchat": "styles/audio/VacheAchat.ogg",
+        "description": "Un bon petit steak de boeuf de france, qualité AAA",
+        "price": "10$"
+
+    },
+    "skin4": {
+        "name": "Steak",
+        "origine": "Boeuf",
+        "image": "styles/Image/ImageDeSteak.jpg",
+        "audio": "styles/Audio/VacheTest.ogg",
+        "audioAchat": "styles/audio/VacheAchat.ogg",
+        "description": "Un bon petit steak de boeuf de france, qualité AAA",
+        "price": "10$"
 
     }
 
