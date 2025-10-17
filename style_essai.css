@@ -415,3 +415,234 @@ nav a:hover {
     .card { width: 80%; }
 }
 
+/* Réinitialisation de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* ---------------------------------- */
+/* Styles pour la Section des Recettes */
+/* ---------------------------------- */
+
+.section-recettes {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff; /* Fond blanc pour cette section */
+}
+
+.entete-recettes {
+    margin-bottom: 30px;
+}
+
+.icone-feuille {
+    font-size: 2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.entete-recettes h2 {
+    color: #5cb85c; /* Vert pour le titre */
+    font-size: 1.8em;
+    margin: 0 0 10px 0;
+}
+
+.entete-recettes p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.9em;
+}
+
+.conteneur-cartes {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alignement vertical des flèches */
+    gap: 20px; /* Espace entre les cartes */
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fleche {
+    font-size: 1.5em;
+    color: #888;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    position: absolute; /* Positionnement absolu pour les flèches */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.fleche.gauche { left: 0; }
+.fleche.droite { right: 0; }
+
+.carte-recette {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Pour afficher trois cartes */
+    min-width: 280px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.carte-recette:hover {
+    transform: translateY(-5px);
+}
+
+.carte-recette img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.corps-carte {
+    padding: 15px;
+}
+
+.corps-carte h3 {
+    color: #333;
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+.description-carte {
+    font-size: 0.8em;
+    color: #999;
+    margin-bottom: 15px;
+    min-height: 40px; /* Pour un alignement visuel */
+}
+
+.statistiques {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-size: 0.8em;
+    color: #5cb85c; /* Vert pour les stats */
+}
+
+.stat {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stat p {
+    margin: 0;
+    color: #666;
+}
+
+.indicateurs {
+    margin-top: 30px;
+}
+
+.point {
+    height: 8px;
+    width: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.point.actif {
+    background-color: #5cb85c; /* Point actif en vert */
+}
+
+/* ---------------------------------- */
+/* Styles pour la Section des Services */
+/* ---------------------------------- */
+
+.section-services {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8; /* Fond légèrement grisé */
+}
+
+.entete-services h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.conteneur-services {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espace entre les colonnes */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.colonne-services {
+    width: 45%; /* Chaque colonne prend 45% de l'espace */
+}
+
+.service {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.icone-service {
+    font-size: 2.5em;
+    color: #5cb85c; /* Vert pour l'icône */
+    margin-right: 15px;
+    padding: 10px;
+    background-color: #e6ffe6; /* Fond légèrement coloré pour l'icône */
+    border-radius: 5px;
+}
+
+.texte-service h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.texte-service p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* ---------------------------------- */
+/* Adaptation pour petits écrans (Responsivité) */
+/* ---------------------------------- */
+@media (max-width: 900px) {
+    .conteneur-cartes {
+        flex-direction: column; /* Les cartes s'empilent */
+        gap: 30px;
+    }
+
+    .carte-recette {
+        width: 90%; /* Les cartes prennent plus de place */
+    }
+
+    .fleche {
+        display: none; /* Cache les flèches sur mobile pour simplifier */
+    }
+
+    .conteneur-services {
+        flex-direction: column; /* Les colonnes de services s'empilent */
+        gap: 0;
+    }
+
+    .colonne-services {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

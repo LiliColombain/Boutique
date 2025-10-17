@@ -109,3 +109,46 @@ function animate(){
   });
   requestAnimationFrame(animate);
 }
+
+// Écoute l'événement de défilement de la fenêtre
+window.addEventListener('scroll', () => {
+    // Récupère l'état actuel du défilement
+    const scrollY = window.scrollY;
+
+    // Récupère les éléments (on utilise querySelector plus tôt pour la performance)
+    const video = document.querySelector('.video-parallax');
+    const content = document.querySelector('.contenu-superpose');
+
+    if (!video || !content) return; // Sécurité au cas où les éléments ne sont pas trouvés
+
+    // ===================================
+    // 🌫️ Calcul des Effets Visuels
+    // ===================================
+
+    // Flou Progressif : Augmente le flou jusqu'à 8px maximum.
+    const maxBlur = 8;
+    const blurRate = 50; // Nombre de pixels de défilement pour atteindre 1px de flou
+    const blurAmount = Math.min(scrollY / blurRate, maxBlur);
+
+    // Opacité de la Vidéo : Diminue jusqu'à 30% d'opacité (0.3).
+    const minOpacity = 0.3;
+    const fadeDistance = 600; // Distance de défilement sur laquelle l'effet d'estompage se produit
+    const videoOpacity = Math.max(1 - scrollY / fadeDistance, minOpacity);
+
+    // Opacité du Texte (Héro) : Disparaît complètement à mesure que l'utilisateur défile.
+    const textFadeDistance = 400; 
+    const textOpacity = Math.max(1 - scrollY / textFadeDistance, 0);
+
+    // ===================================
+    // 🎨 Application des Styles
+    // ===================================
+
+    video.style.filter = `blur(${blurAmount}px)`;
+    video.style.opacity = videoOpacity;
+
+    // Applique une légère translation pour simuler l'effet parallax (optionnel, voir note ci-dessous)
+    // Pour que la vidéo (fixe) semble bouger plus lentement que le contenu qui la recouvre
+    video.style.transform = `translateY(${-scrollY * 0.15}px)`; 
+
+    content.style.opacity = textOpacity;
+});

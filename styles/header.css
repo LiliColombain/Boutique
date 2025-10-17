@@ -8,7 +8,7 @@
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-* {
+ /*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +17,7 @@
     background-position: center;
     background-attachment: fixed;
     font-family: "Poppins", sans-serif;
-}
+} */
 
 nav {
     display: flex;
@@ -56,6 +56,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #000000;
+    color: var(--rouge);
     text-shadow: 0 0 10px rgba(174, 228, 255, 0.8);
 }
