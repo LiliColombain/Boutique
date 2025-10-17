@@ -1,3 +1,13 @@
+:root {
+    --rouge: #B22222;
+    --brun: #A0522D;
+    --vert: #9ACD32;
+    --beige: #FFF8E7;
+    --gris: #2C2C2C;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #fafafa;
