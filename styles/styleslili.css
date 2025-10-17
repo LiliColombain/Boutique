@@ -5,20 +5,18 @@ body {
     padding: 0;
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 .intro {
+    margin-top: 50px;
     display: flex;
-    background-image: url("images/Apropos/behindTheKitchen.png");
-
+    background-image: url("images/Apropos/placeholder.png");
     background-repeat: no-repeat;
-    /* Do not repeat the image */
     background-size: cover;
-    /* Resize the background image to cover the entire container */
     height: 500px;
-    /* You must set a specified height */
     background-position: center;
-    /* Center the image */
+
     
     font-family: "Molle", cursive;
     color: #d10000;
@@ -28,17 +26,8 @@ body {
     font-size: 50px;
 }
 
-.intro h1{
-    display: flex;
-    position: absolute;
-    margin-left: 5%;
-
+.text-titre {
+    display:flex;
 }
 
-.title {
-    display: flex;
-    position: relative;
-    margin: 7%;
-    margin-left: 15%;
-    
-}
+

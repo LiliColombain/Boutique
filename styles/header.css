@@ -40,7 +40,7 @@ nav ul {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
-    box-shadow: 10px 5px 5px var(--gris);
+    
 }
 
 nav ul li a {
