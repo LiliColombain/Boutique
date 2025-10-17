@@ -1,18 +1,11 @@
 {
     "skin1": {
-        "name": "skin1",
-        "couleur": "rouge"
+        "name": "Steak",
+        "origine": "Boeuf"
     },
     "skin2": {
-        "name": "skin2",
-        "couleur": "black"
-    },
-    "skin3": {
-        "name": "skin3",
-        "couleur": "patate"
-    },
-    "skin4": {
-        "name": "skin4",
-        "couleur": "Schwarst"
+        "name": "saucisse",
+        "origine": "Cochon"
     }
+
 }

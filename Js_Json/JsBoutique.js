@@ -10,10 +10,10 @@ fetch('/Js_Json/DataBoutique.json')
             produitCarte.className = "block"
 
             const nom = document.createElement('p');
-            nom.textContent = `Name: ${produit.name}`;
+            nom.textContent = `${produit.name}`;
 
             const color = document.createElement('p');
-            color.textContent = `couleur: ${produit.couleur}`;
+            color.textContent = `${produit.origine}`;
 
             produitCarte.appendChild(nom);
             produitCarte.appendChild(color);
