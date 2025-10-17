@@ -9,8 +9,10 @@ fetch('/Js_Json/DataBoutique.json')
             const produitCarte = document.createElement('div');
             produitCarte.className = "block"
 
-            const nom = document.createElement('p');
+            const nom = document.createElement('h3');
             nom.textContent = `${produit.name}`;
+
+            const
 
             const color = document.createElement('p');
             color.textContent = `${produit.origine}`;

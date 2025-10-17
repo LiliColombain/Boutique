@@ -8,12 +8,6 @@
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #fafafa;
-    padding: 20px;
-}
-
 .block {
     border: 1px solid #ccc;
     border-radius: 10px;
