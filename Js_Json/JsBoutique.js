@@ -15,8 +15,22 @@ fetch('/Js_Json/DataBoutique.json')
             const color = document.createElement('p');
             color.textContent = `${produit.origine}`;
 
+            const img = document.createElement('img');
+            img.src = produit.image;
+            img.alt = produit.name;
+            img.className = "image-produit";
+
+            const audio = document.createElement('audio');
+            audio.src = produit.audio;
+            audio.controls = true;
+            audio.className = "lecteur-audio";
+
+
+
             produitCarte.appendChild(nom);
             produitCarte.appendChild(color);
+            produitCarte.appendChild(img)
+            produitCarte.appendChild(audio)
 
             zoneProduit.append(produitCarte);
         }

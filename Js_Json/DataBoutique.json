@@ -1,11 +1,15 @@
 {
     "skin1": {
         "name": "Steak",
-        "origine": "Boeuf"
+        "origine": "Boeuf",
+        "image": "styles/Image/ImageDeSteak.jpg",
+        "audio": "styles/Audio/CochonSon.mp3"
     },
     "skin2": {
         "name": "saucisse",
-        "origine": "Cochon"
+        "origine": "Cochon",
+        "image": "styles/Image/saucisse.jpg",
+        "audio": "styles/Audio/CochonSon.mp3"
     }
 
 }
