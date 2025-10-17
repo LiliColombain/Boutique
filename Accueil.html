@@ -1,11 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boucherie en ligne</title>
+<link rel="stylesheet" href="style_accueil.css">
 </head>
 <body>
-    <p>niquez vos grand mere</p>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="Accueil.html">Accueil</a></li>
+      <li><a href="Boutique.html">Boutique</a></li>
+      <li><a href="Panier.html">Panier</a></li>
+      <li><a href="Apropos.html">À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="kicker">Votre boucherie en ligne</div>
+    <h1 id="title">La viande fraîchement sélectionnée <span aria-hidden>🍖</span></h1>
+    <p class="lead">
+      Découvrez notre sélection de viandes de qualité supérieure, directement du producteur à votre assiette. Fraîcheur, goût et traçabilité garantis pour tous vos repas.
+    </p>
+    <a class="cta" href="#parcours">Parcourir nos produits →</a>
+    <div class="meta">Livraison rapide • Produits locaux • Qualité supérieure</div>
+  </div>
+  <div class="hero-right reveal">
+    <div class="carousel-wrapper">
+      <div class="glow"></div>
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="Food_order_design.jpg" alt="">
+          <img src="Food_order_design.jpg" alt="">
+          <img src="Food_order_design.jpg" alt="">
+          <img src="Food_order_design.jpg" alt="">
+          <img src="Food_order_design.jpg" alt="">
+          <img src="Food_order_design.jpg" alt="">
+        </div>
+        <div class="center-image">
+          <img src="Food_order_design.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+<div class="carousel-section">
+    <div class="carousel-header">
+        <h1>NOS VIANDES</h1>
+        <p>Découvrez notre sélection de viandes fraîches et de qualité</p>
+    </div>
+
+    <div class="carousel-container">
+        <button class="nav-arrow left-arrow">&lt;</button>
+        <div class="carousel-track">
+            <div class="card">
+                <div class="image-box"><img src="image1.jpg" alt="Boeuf"></div>
+                <div class="title">Boeuf</div>
+                <div class="description">Boeuf frais et savoureux</div>
+                <div class="details"><span>200g</span><span>Viande Rouge</span></div>
+            </div>
+            <div class="card">
+                <div class="image-box"><img src="image2.jpg" alt="Poulet"></div>
+                <div class="title">Poulet</div>
+                <div class="description">Poulet fermier tendre</div>
+                <div class="details"><span>250g</span><span>Viande Blanche</span></div>
+            </div>
+            <div class="card">
+                <div class="image-box"><img src="image3.jpg" alt="Agneau"></div>
+                <div class="title">Agneau</div>
+                <div class="description">Agneau tendre et goûteux</div>
+                <div class="details"><span>200g</span><span>Viande Rouge</span></div>
+            </div>
+            <div class="card">
+                <div class="image-box"><img src="image4.jpg" alt="Porc"></div>
+                <div class="title">Porc</div>
+                <div class="description">Porc frais pour grillades</div>
+                <div class="details"><span>250g</span><span>Viande Rouge</span></div>
+            </div>
+            <div class="card">
+                <div class="image-box"><img src="image5.jpg" alt="Dinde"></div>
+                <div class="title">Dinde</div>
+                <div class="description">Dinde fermière délicate</div>
+                <div class="details"><span>300g</span><span>Viande Blanche</span></div>
+            </div>
+            <div class="card">
+                <div class="image-box"><img src="image6.jpg" alt="Saucisse"></div>
+                <div class="title">Saucisse</div>
+                <div class="description">Saucisses artisanales</div>
+                <div class="details"><span>150g</span><span>Mixte</span></div>
+            </div>
+        </div>
+        <button class="nav-arrow right-arrow">&gt;</button>
+    </div>
+</div>
+</section>
+
+
+<section class="vertical-cards-section" id="parcours">
+  <div class="column left">
+    <div class="card"><img src="Food_order_design.jpg" alt=""><h3>Fruits</h3><p>Du champ à votre assiette</p></div>
+    <div class="card"><img src="Food_order_design.jpg" alt=""><h3>Légumes</h3><p>Voyage des fermes locales</p></div>
+    <div class="card"><img src="Food_order_design.jpg" alt=""><h3>Herbes</h3><p>Du jardin à la cuisine</p></div>
+  </div>
+  <div class="center-space">
+  <canvas id="meatCanvas" width="300" height="400"></canvas>
+</div>
+
+
+  <div class="column right">
+    <div class="card"><img src="Food_order_design.jpg" alt=""><h3>Viande</h3><p>De l’élevage à votre assiette</p></div>
+    <div class="card"><img src="Food_order_design.jpg" alt=""><h3>Poisson</h3><p>Trajet depuis la mer</p></div>
+    <div class="card"><img src="Food_order_design.jpg" alt=""><h3>Produits laitiers</h3><p>Lait et dérivés</p></div>
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
