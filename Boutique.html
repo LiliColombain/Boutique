@@ -30,8 +30,29 @@
     </header>
 
     <h1>Boutique</h1>
-    <div id="produits" class="bigDiv"></div>
+    <div class="King">
+        <!-- Barre latérale -->
+        <aside class="sidebar">
+            <h2>Contrôles</h2>
+            <button id="mute-btn">Couper le son</button>
 
+            <h2>Filtrer par origine</h2>
+            <select id="filtre-origine">
+            <option value="all">Tous</option>
+            <option value="Boeuf">Boeuf</option>
+            <option value="Cochon">Cochon</option>
+        </select>
+
+            <h2>Trier par nom</h2>
+            <select id="tri-nom">
+            <option value="asc">Nom A→Z</option>
+            <option value="desc">Nom Z→A</option>
+        </select>
+        </aside>
+
+        <!-- Zone des produits -->
+        <div id="produits" class="products"></div>
+    </div>
     <script src="Js_Json/JsBoutique.js "></script>
 </body>
 

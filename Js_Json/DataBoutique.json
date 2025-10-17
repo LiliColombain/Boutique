@@ -3,15 +3,17 @@
         "name": "Steak",
         "origine": "Boeuf",
         "image": "styles/Image/ImageDeSteak.jpg",
-        "audio": "styles/Audio/CochonSon.mp3",
+        "audio": "styles/Audio/VacheTest.ogg",
+        "audioAchat": "styles/audio/VacheAchat.ogg",
         "description": "Un bon petit steak de boeuf de france, qualité AAA"
     },
     "skin2": {
         "name": "saucisse",
         "origine": "Cochon",
         "image": "styles/Image/saucisse.jpg",
-        "audio": "styles/Audio/CochonSon.mp3",
-        "description": "saucisse pas folle folle mais ca va en vrai"
+        "audio": "styles/Audio/CochonTester.ogg",
+        "audioAchat": "styles/audio/CochonAcheter.mp3",
+        "description": "Une saucisse basic quoi"
 
     }
 
