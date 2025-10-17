@@ -20,9 +20,9 @@
 
     },
     "skin3": {
-        "name": "Steak",
-        "origine": "Boeuf",
-        "image": "styles/Image/ImageDeSteak.jpg",
+        "name": "Poulet Crue",
+        "origine": "Poulet",
+        "image": "styles/Image/poulet.jpg",
         "audio": "styles/Audio/VacheTest.ogg",
         "audioAchat": "styles/audio/VacheAchat.ogg",
         "description": "Un bon petit steak de boeuf de france, qualité AAA",

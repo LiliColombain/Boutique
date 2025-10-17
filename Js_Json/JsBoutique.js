@@ -111,7 +111,7 @@ fetch('/Js_Json/DataBoutique.json')
         const triNom = document.getElementById('tri-nom');
         triNom.addEventListener('change', () => {
             const cartes = Array.from(zoneProduit.children);
-            cartes.sort((a, b) => {
+            cartes.sort((a, b, c) => {
                 const nomA = a.dataset.name.toLowerCase();
                 const nomB = b.dataset.name.toLowerCase();
                 return triNom.value === 'asc' ? nomA.localeCompare(nomB) : nomB.localeCompare(nomA);

@@ -142,10 +142,12 @@ h1 {
 
 .descri {
     display: none;
+    text-align: center;
 }
 
 .block:hover .descri {
     display: contents;
+    text-align: center;
 }
 
 
