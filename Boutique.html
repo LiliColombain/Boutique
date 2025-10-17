@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A propos</title>
+    <title>Boutique</title>
     <link rel="stylesheet" href="styles/StylesBoutique.css">
     <link rel="stylesheet" href="styles/header.css">
 </head>
@@ -13,47 +13,34 @@
     <header>
         <nav>
             <ul>
-                <li>
-                    <a href="Accueil.html">Accueil</a>
-                </li>
-                <li>
-                    <a href="Boutique.html">Boutique</a>
-                </li>
-                <li>
-                    <a href="Panier.html">Panier</a>
-                </li>
-                <li>
-                    <a href="Apropos.html">A propos</a>
-                </li>
+                <li><a href="Accueil.html">Accueil</a></li>
+                <li><a href="Boutique.html">Boutique</a></li>
+                <li><a href="Panier.html">Panier</a></li>
+                <li><a href="Apropos.html">A propos</a></li>
             </ul>
         </nav>
     </header>
-
+    <br>
     <h1>Boutique</h1>
     <div class="King">
-        <!-- Barre latérale -->
         <aside class="sidebar">
-            <h2>Contrôles</h2>
-            <button id="mute-btn">Couper le son</button>
-
-            <h2>Filtrer par origine</h2>
+            <h3>Audio</h3>
+            <button id="mute-btn">On</button>
+            <h3>Filtrer par origine</h3>
             <select id="filtre-origine">
-            <option value="all">Tous</option>
-            <option value="Boeuf">Boeuf</option>
-            <option value="Cochon">Cochon</option>
-        </select>
-
-            <h2>Trier par nom</h2>
+                <option value="all">Tous</option>
+                <option value="Boeuf">Boeuf</option>
+                <option value="Cochon">Cochon</option>
+            </select>
+            <h3>Trier par nom</h3>
             <select id="tri-nom">
-            <option value="asc">Nom A→Z</option>
-            <option value="desc">Nom Z→A</option>
-        </select>
+                <option value="asc">Nom A→Z</option>
+                <option value="desc">Nom Z→A</option>
+            </select>
         </aside>
-
-        <!-- Zone des produits -->
         <div id="produits" class="products"></div>
     </div>
-    <script src="Js_Json/JsBoutique.js "></script>
+    <script src="Js_Json/JsBoutique.js"></script>
 </body>
 
 </html>
