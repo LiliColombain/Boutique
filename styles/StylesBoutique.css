@@ -18,28 +18,155 @@ body {
 }
 
 h1 {
-    font-size: 50px;
     text-align: center;
-    color: var(--gris);
+    font-family: "Shrikhand", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 50px;
+    color: #d10000;
 }
 
+/* Structure générale */
 .King {
     display: flex;
+    margin-top: 20px;
     height: calc(100vh - 80px);
 }
 
 .sidebar {
-    margin-top: 75px;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 250px;
-    height: 100vh;
     padding: 20px;
     background-color: var(--beige);
     border-right: 1px solid #ddd;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
 }
 
+.products {
+    margin-left: 270px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    flex: 1;
+    min-width: 0;
+}
+
+/* Style des cartes de produit */
+.block {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    height: auto;
+    min-height: 380px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--beige)
+}
+
+.block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.block img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: var(--gris);
+}
+
+.product-info p {
+    margin: 5px 0;
+    color: #cd0e0e;
+}
+
+.price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--white);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: var(--gris);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Boutons "Tester" et "Acheter" */
+.boutons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.bouton-tester, .bouton-acheter {
+    width: 48%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bouton-tester {
+    background-color: var(--dark-green);
+}
+
+.bouton-tester:hover {
+    background-color: #4a7a52;
+}
+
+.bouton-tester.en-lecture {
+    background-color: #2ecc71;
+}
+
+.bouton-acheter {
+    background-color: var(--rouge);
+}
+
+.bouton-acheter:hover {
+    background-color: #8b0000;
+}
+
+/* Description (apparaît au survol) */
+.descri {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.block:hover .descri {
+    opacity: 1;
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+/* Filtre et sidebar */
 .sidebar h3 {
     margin-top: 0;
     color: var(--gris);
@@ -56,102 +183,17 @@ h1 {
     background-color: var(--white);
 }
 
-
-/* Carte produit */
-
-.products {
-    flex: 1;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    overflow-y: auto;
-    margin-left: 270px;
-}
-
-.block {
-    background-color: var(--white);
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(5, 5, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.5s;
-    position: relative;
-}
-
-.block:hover {
-    transform: scale(1.05);
-}
-
-.block img {
+#filtre-origine {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 15px;
-    text-align: left;
-}
-
-.product-info h2 {
-    margin: 0 0 10px 0;
-    font-size: 20px;
-    color: var(--gris);
-}
-
-.product-info p {
-    margin: 5px 0;
-    color: #cd0e0e;
-}
-
-.price {
-    position: relative;
-    top: 15px;
-    right: 15px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     background-color: var(--white);
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: var(--gris);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.bouton-audio {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 6px;
-    border: none;
-    background-color: var(--dark-green);
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.bouton-audio:hover {
-    background-color: #4a7a52;
-}
-
-.bouton-audio.en-lecture {
-    background-color: #2ecc71;
-}
-
-.block h3 {
-    text-align: center;
-}
-
-.descri {
-    display: none;
-    text-align: center;
-}
-
-.block:hover .descri {
-    display: contents;
-    text-align: center;
-}
-
-
-
+/* Footer */
 footer {
     text-align: center;
+    margin-top: 20px;
 }
