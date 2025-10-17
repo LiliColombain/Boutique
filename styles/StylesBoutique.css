@@ -147,3 +147,9 @@ h1 {
 .block:hover .descri {
     display: contents;
 }
+
+
+
+footer {
+    text-align: center;
+}
