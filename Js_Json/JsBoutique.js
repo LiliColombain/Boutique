@@ -15,6 +15,9 @@ fetch('/Js_Json/DataBoutique.json')
             const color = document.createElement('p');
             color.textContent = `${produit.origine}`;
 
+            const descri = document.createElement('p');
+            descri.textContent = `${produit.description}`;
+
             const img = document.createElement('img');
             img.src = produit.image;
             img.alt = produit.name;
@@ -29,8 +32,9 @@ fetch('/Js_Json/DataBoutique.json')
 
             produitCarte.appendChild(nom);
             produitCarte.appendChild(color);
-            produitCarte.appendChild(img)
-            produitCarte.appendChild(audio)
+            produitCarte.appendChild(img);
+            produitCarte.appendChild(descri);
+            produitCarte.appendChild(audio);
 
             zoneProduit.append(produitCarte);
         }
