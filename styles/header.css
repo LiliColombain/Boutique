@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url("../istockphoto-1069539210-612x612.jpg");
+  background-color:#FFF8E7;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -40,7 +40,7 @@ nav ul li a {
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.3s ease, text-shadow 0.3s ease;
-   background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
 }
