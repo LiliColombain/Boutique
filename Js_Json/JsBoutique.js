@@ -13,11 +13,15 @@ fetch('/Js_Json/DataBoutique.json')
             produitCarte.dataset.origine = produit.origine;
             produitCarte.dataset.name = produit.name;
 
+
+
             const img = document.createElement('img');
             img.src = produit.image;
             img.alt = produit.name;
 
-            const nom = document.createElement('p');
+
+
+            const nom = document.createElement('h3');
             nom.textContent = produit.name;
             const origine = document.createElement('p');
             origine.textContent = produit.origine;
@@ -30,6 +34,10 @@ fetch('/Js_Json/DataBoutique.json')
             boutonAudio.className = "bouton-audio";
             const audio = new Audio(produit.audio);
             audios.push(audio);
+
+            const descriptionProduit = document.createElement('p');
+            descriptionProduit.className = "descri";
+            descriptionProduit.textContent = produit.description;
 
             boutonAudio.addEventListener('click', () => {
                 if (audio.paused) {
@@ -44,6 +52,13 @@ fetch('/Js_Json/DataBoutique.json')
             audio.addEventListener('ended', () => {
                 boutonAudio.classList.remove('en-lecture');
             });
+
+            zoneProduit.appendChild(produitCarte);
+            produitCarte.appendChild(nom);
+            produitCarte.appendChild(origine);
+            produitCarte.appendChild(prix)
+            produitCarte.appendChild(img);
+            produitCarte.appendChild(boutonAudio);
 
             if (produit.audioAchat) {
                 const boutonAudioAchat = document.createElement('button');
@@ -62,20 +77,17 @@ fetch('/Js_Json/DataBoutique.json')
                     }
                 });
 
+
                 audioAchat.addEventListener('ended', () => {
                     boutonAudioAchat.classList.remove('en-lecture');
                 });
 
                 produitCarte.appendChild(boutonAudioAchat);
             }
+            produitCarte.appendChild(descriptionProduit)
 
-            produitCarte.appendChild(img);
-            produitCarte.appendChild(nom);
-            produitCarte.appendChild(origine);
-            produitCarte.appendChild(boutonAudio);
-            produitCarte.appendChild(prix)
 
-            zoneProduit.appendChild(produitCarte);
+
         }
 
         const muteBtn = document.getElementById('mute-btn');
@@ -95,7 +107,7 @@ fetch('/Js_Json/DataBoutique.json')
             });
         });
 
-        // Tri
+
         const triNom = document.getElementById('tri-nom');
         triNom.addEventListener('change', () => {
             const cartes = Array.from(zoneProduit.children);

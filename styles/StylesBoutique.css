@@ -14,7 +14,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: var(--beige);
 }
 
 h1 {
@@ -72,14 +72,14 @@ h1 {
 .block {
     background-color: var(--white);
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(5, 5, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
     position: relative;
 }
 
 .block:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .block img {
@@ -101,11 +101,11 @@ h1 {
 
 .product-info p {
     margin: 5px 0;
-    color: #666;
+    color: #cd0e0e;
 }
 
 .price {
-    position: absolute;
+    position: relative;
     top: 15px;
     right: 15px;
     background-color: var(--white);
@@ -114,21 +114,6 @@ h1 {
     font-weight: bold;
     color: var(--gris);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.ingredients {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 10px;
-}
-
-.ingredient {
-    background-color: var(--light-green);
-    color: var(--dark-green);
-    padding: 3px 8px;
-    border-radius: 10px;
-    font-size: 12px;
 }
 
 .bouton-audio {
@@ -149,4 +134,16 @@ h1 {
 
 .bouton-audio.en-lecture {
     background-color: #2ecc71;
+}
+
+.block h3 {
+    text-align: center;
+}
+
+.descri {
+    display: none;
+}
+
+.block:hover .descri {
+    display: contents;
 }
