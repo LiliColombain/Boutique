@@ -10,11 +10,11 @@
   --white: #ffffff;
   --shadow: 0 10px 30px rgba(0,0,0,0.12);
 
-  --color-primary: #b33a3a; /* Rouge viande */
+  --color-primary: #b33a3a; 
   --color-text-dark: #333;
   --color-text-medium: #555;
   --color-text-light: #888;
-  --color-star: #fbbc05; /* Jaune/Or */
+  --color-star: #fbbc05; 
   --color-background: #f8f8f8;
   --color-border: #eee;
 }
@@ -493,7 +493,7 @@ body {
 }
 
 .entete-services h3 {
-  color: #333;
+  color: var(--rouge);
   font-size: 1.5em;
   margin-bottom: 40px;
 }
@@ -520,7 +520,7 @@ body {
   color: var(--vert);
   margin-right: 15px;
   padding: 10px;
-  background-color: #e6ffe6;
+  background-color: var(--white);
   border-radius: 5px;
 }
 
@@ -542,3 +542,4 @@ body {
 @media (max-width: 600px) {
   .recipe-card { width: 90%; max-width: none; }
 }
+
