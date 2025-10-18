@@ -160,7 +160,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* Positionnement circulaire des images */
+
 .carousel img:nth-child(1) { transform: rotateY(0deg) translateZ(160px); }
 .carousel img:nth-child(2) { transform: rotateY(60deg) translateZ(160px); }
 .carousel img:nth-child(3) { transform: rotateY(120deg) translateZ(160px); }
@@ -195,9 +195,9 @@ body {
   color: var(--vert);
 }
 
-/* ============================== */
-/* VIDEO PARALLAX INTRODUCTION */
-/* ============================== */
+/* ================ */
+/* VIDEO PARALLAX  */
+/* =============== */
 
 
 .video-parallax-wrapper {
