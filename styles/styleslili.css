@@ -1,40 +1,167 @@
-html,
+/* ============================== */
+/* VARIABLES GLOBALES */
+/* ============================== */
+:root {
+    --rouge: #B22222;
+    --brun: #A0522D;
+    --vert: #9ACD32;
+    --beige: #FFF8E7;
+    --gris: #2C2C2C;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    --color-primary: #b33a3a;
+    --color-text-dark: #333;
+    --color-text-medium: #555;
+    --color-text-light: #888;
+    --color-star: #fbbc05;
+    --color-background: #f8f8f8;
+    --color-border: #eee;
+}
+
+/* ============================== */
+/* BODY */
+/* ============================== */
 body {
-    background-color: #FFF8E7;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background: var(--beige);
+    color: var(--gris);
 }
 
+/* ============================== */
+/* BACKGROUND IMAGE */
+/* ============================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
-.intro {
-
+.images-parallax-bk {
+    height: 100vh;
     width: 100%;
-    height: 500px;
-    background-image: url('images/Apropos/placeholder.png');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
 
+
+.image-parallax {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    min-width: 100%;
+    height: 130%;
+    transform: translate(-10%, -10%);
+    z-index: -1;
 
 }
 
-.text-titre {
+.block {
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    height: 100vh;
+    z-index: 9;
+}
 
-
-    width: 70%;
-    color: rgb(183, 0, 0);
+.contenu-superpose {
+    position: absolute;
+    margin-left: 15%;
+    z-index: 10;
+    width: 35%;
+    color: white;
     text-align: left;
+    padding-top: 200px;
+
+}
+
+/* ============================== */
+/* BUTTON */
+/* ============================== */
+
+.box {
     display: flex;
-    flex-direction: column;
-    
+    gap: 10%;
+    margin-left: 10%;
+    margin-top: 30px;
+}
 
-    font-size: 30px;
-    font-family: "Shrikhand", serif;
-    font-weight: 600;
-    font-style: italic;
+.call-to-action {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--vert);
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
 
+.call-to-action:hover {
+    background: var(--rouge);
+}
+
+.normal {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.about-us-part {
+    background-color: var(--beige);
+    height: 1000px;
+}
+
+.content-title {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.halo {
+    width: 35%;
+}
+
+.steak-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box-container {
+    background-color: rgb(223, 61, 61);
+    border-radius: 15px;
+    width: 600px;
+    height: 600px;
+    margin-right: 150px;
+    margin-top: 100px;
+}
+
+.box-top {
+    background-color: #9ACD32;
+    width: 570px;
+    height: 250px;
+    margin : 15px;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+
+.box-bottom-container {
+    background-color: #9ACD32;
+    border-radius: 5px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px;
+    width: 280px;
+    height: 300px;
+}
+
+.box-left {
+    background-color: #9ACD32;
+    border-radius: 5px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px;
+    width: 280px;
+    height: 300px;
 }
