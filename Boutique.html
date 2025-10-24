@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique</title>
-    <link rel="stylesheet" href="styles/StylesBoutique.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/StylesBoutique.css">
 </head>
 
 <body>
     <header>
+        <!-- ta navbar existante - on ne la touche pas -->
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -20,36 +21,55 @@
             </ul>
         </nav>
     </header>
-    <br>
-    <h1>Boutique</h1>
-    <div class="King">
-        <aside class="sidebar">
-            <h3>Audio</h3>
-            <button id="mute-btn">On</button>
-            <h3>Filtrer par origine</h3>
-            <select id="filtre-origine">
-                <option value="all">Tous</option>
-                <option value="Boeuf">Boeuf</option>
-                <option value="Cochon">Cochon</option>
-            </select>
-            <h3>Trier par nom</h3>
-            <select id="tri-nom">
-                <option value="asc">Nom A→Z</option>
-                <option value="desc">Nom Z→A</option>
-            </select>
-        </aside>
-        <div id="produits" class="products"></div>
+
+    <div class="about-us-part">
+        <div class="content-title">
+            <h1>Notre Histoire</h1>
+            <p>Le secret de nos saveurs réside dans un héritage familial et un engagement inébranlable envers la qualité
+                supérieure.</p>
+        </div>
+
+        <div class="steak-image">
+            <img class="halo" src="styles/images/Apropos/steak.png" alt="steak">
+            <div class="box-container">
+                <div class="box-top"></div>
+                <div class="box-bottom-container">
+                    <div class="box-left"></div>
+                    <div class="box-left"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="Js_Json/JsBoutique.js"></script>
+
+    <section class="filtres">
+        <button id="mute-btn">On</button>
+        <select id="filtre-origine">
+            <option value="all">Toutes origines</option>
+            <option value="Boeuf">Boeuf</option>
+            <option value="Cochon">Cochon</option>
+            <option value="Poulet">Poulet</option>
+        </select>
+        <select id="tri-prix">
+            <option value="asc">Prix croissant</option>
+            <option value="desc">Prix décroissant</option>
+        </select>
+    </section>
+
+    <h2>Promotions</h2>
+    <div class="section-produits promotions"></div>
+
+    <h2>Produits phares</h2>
+    <div class="section-produits phares"></div>
+
+    <h2>Tous les produits</h2>
+    <div class="section-produits tous-produits"></div>
 
     <footer>
         <hr>
-        <br>
-        <br>
-        <h4>Realisé par le GOATTTTTTTTTTTTTTT </h4>
-        <br>
-        <br>
+        <p>Réalisé par le GOATTTTTTT</p>
     </footer>
+
+    <script src="Js_Json/JsBoutique.js"></script>
 </body>
 
 </html>
