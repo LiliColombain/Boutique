@@ -152,3 +152,18 @@ window.addEventListener('scroll', () => {
 
     content.style.opacity = textOpacity;
 });
+
+
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+const container = document.querySelector('.recipes-container');
+
+const scrollAmount = 320; // largeur approximative d'une carte + gap
+
+leftArrow.addEventListener('click', () => {
+  container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+rightArrow.addEventListener('click', () => {
+  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});

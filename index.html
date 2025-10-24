@@ -97,19 +97,6 @@
         <img src="saucisse.jpg" alt="Steak de boeuf tendre">
       </div>
       <div class="content">
-        <div class="rating-and-actions">
-          <span class="stars">
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star"></i>
-          </span>
-          <div class="actions">
-            <i class="fa-solid fa-share-nodes"></i>
-            <i class="fa-regular fa-bookmark"></i>
-          </div>
-        </div>
         <h2 class="title">Steak de bœuf tendre</h2>
         <p class="description">Viande rouge 100% locale, idéale pour vos grillades et repas familiaux.</p>
         <div class="details">
@@ -133,19 +120,6 @@
         <img src="saucisse.jpg" alt="Poulet fermier">
       </div>
       <div class="content">
-        <div class="rating-and-actions">
-          <span class="stars">
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star"></i>
-          </span>
-          <div class="actions">
-            <i class="fa-solid fa-share-nodes"></i>
-            <i class="fa-regular fa-bookmark"></i>
-          </div>
-        </div>
         <h2 class="title">Poulet fermier</h2>
         <p class="description">Poulet élevé en plein air, tendre et savoureux, parfait pour le rôti du dimanche.</p>
         <div class="details">
@@ -169,19 +143,6 @@
         <img src="saucisse.jpg" alt="Côtelettes de mouton">
       </div>
       <div class="content">
-        <div class="rating-and-actions">
-          <span class="stars">
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star filled"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </span>
-          <div class="actions">
-            <i class="fa-solid fa-share-nodes"></i>
-            <i class="fa-regular fa-bookmark"></i>
-          </div>
-        </div>
         <h2 class="title">Côtelettes de mouton</h2>
         <p class="description">Délicieusement parfumées, parfaites pour le barbecue ou les repas entre amis.</p>
         <div class="details">
@@ -212,23 +173,89 @@
     </section>
 
 
-       <section class="vertical-cards-section" id="parcours">
-  <div class="column left">
-    <div class="card"><img src="saucisse.jpg" alt=""><h3>Fruits</h3><p>Du champ à votre assiette</p></div>
-    <div class="card"><img src="saucisse.jpg" alt=""><h3>Légumes</h3><p>Voyage des fermes locales</p></div>
-    <div class="card"><img src="saucisse.jpg" alt=""><h3>Herbes</h3><p>Du jardin à la cuisine</p></div>
-  </div>
-  <div class="center-space">
-  <canvas id="meatCanvas" width="300" height="400"></canvas>
-</div>
+ 
+
+  <canvas id="meatCanvas" width="0" height="0"></canvas>
 
 
-  <div class="column right">
-    <div class="card"><img src="saucisse.jpg" alt=""><h3>Viande</h3><p>De l’élevage à votre assiette</p></div>
-    <div class="card"><img src="saucisse.jpg" alt=""><h3>Poisson</h3><p>Trajet depuis la mer</p></div>
-    <div class="card"><img src="saucisse.jpg" alt=""><h3>Produits laitiers</h3><p>Lait et dérivés</p></div>
+<section id="parcours">
+  <div class="parcours-container">
+
+  
+    <div class="cartes gauche">
+      <div class="carte">
+        <div class="icone"><i class="fas fa-drumstick-bite"></i></div>
+        <h3 class="titre">Viande de Qualité</h3>
+        <p class="description">Nous sélectionnons les meilleures viandes pour garantir goût et fraîcheur.</p>
+        <div class="overlay">
+          <h3 class="overlay-titre">Top Qualité</h3>
+          <p class="overlay-desc">Viande premium sélectionnée pour un goût exceptionnel. Idéale pour toutes vos recettes.</p>
+        </div>
+      </div>
+
+      <div class="carte">
+        <div class="icone"><i class="fas fa-ice-cream"></i></div>
+        <h3 class="titre">Conservation Optimale</h3>
+        <p class="description">Méthodes de stockage et transport pour préserver la viande.</p>
+        <div class="overlay">
+          <h3 class="overlay-titre">Frais & Conservé</h3>
+          <p class="overlay-desc">Stockage optimal pour garantir une fraîcheur maximale et un goût parfait.</p>
+        </div>
+      </div>
+
+      <div class="carte">
+        <div class="icone"><i class="fas fa-fire"></i></div>
+        <h3 class="titre">Préparation Parfaite</h3>
+        <p class="description">Nos experts conseillent pour des cuissons idéales.</p>
+        <div class="overlay">
+          <h3 class="overlay-titre">Cuisson Parfaite</h3>
+          <p class="overlay-desc">Nos conseils pour une cuisson savoureuse et uniforme.</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="central">
+      <img src="IMAGEVIANDE.webp">
+    </div>
+
+  
+    <div class="cartes droite">
+      <div class="carte">
+        <div class="icone"><i class="fas fa-truck"></i></div>
+        <h3 class="titre">Livraison Rapide</h3>
+        <p class="description">Recevez vos produits frais directement chez vous.</p>
+        <div class="overlay">
+          <h3 class="overlay-titre">Express</h3>
+          <p class="overlay-desc">Vos produits frais livrés rapidement et en toute sécurité.</p>
+        </div>
+      </div>
+
+      <div class="carte">
+        <div class="icone"><i class="fas fa-leaf"></i></div>
+        <h3 class="titre">Durabilité</h3>
+        <p class="description">Viandes issues de filières responsables.</p>
+        <div class="overlay">
+          <h3 class="overlay-titre">Écologique</h3>
+          <p class="overlay-desc">Filières responsables et durables pour un impact environnemental réduit.</p>
+        </div>
+      </div>
+
+      <div class="carte">
+        <div class="icone"><i class="fas fa-star"></i></div>
+        <h3 class="titre">Service Premium</h3>
+        <p class="description">Une expérience client unique.</p>
+        <div class="overlay">
+          <h3 class="overlay-titre">Premium</h3>
+          <p class="overlay-desc">Une expérience client exceptionnelle de la commande à la dégustation.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+
 
     <section class="section-services">
         <div class="entete-services">
@@ -283,7 +310,6 @@
     </section>
 
 
-
  
 
 <script src="script.js"></script>
@@ -295,6 +321,5 @@
 
 </body>
 </html>
-
 
 
