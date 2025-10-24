@@ -1,123 +1,101 @@
-// JsBoutique.js
-let audios = [];
-let produitsData = [];
+const audios = [];
+const sections = {
+    promotions: document.querySelector(".promotions"),
+    phares: document.querySelector(".phares"),
+    "tous-produits": document.querySelector(".tous-produits")
+};
 
-fetch('/Js_Json/DataBoutique.json')
-    .then(response => response.json())
-    .then(data => {
-        produitsData = data;
-        const zoneProduit = document.getElementById('produits');
-        const filtreOrigine = document.getElementById('filtre-origine');
+// Exemple de produits (tu peux dupliquer/modifier comme tu veux)
+const produitsExemple = [
+    { nom: "Steak", origine: "Boeuf", image: "styles/Image/ImageDeSteak.jpg", description: "Steak qualité AAA", prix: "10$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" },
+    { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "10$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" },
+    { nom: "Poulet", origine: "Poulet", image: "styles/Image/poulet.jpg", description: "Poulet bien pouleter", prix: "15$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" }
+];
 
-        // Remplir dynamiquement le filtre avec toutes les origines uniques
-        const origines = [...new Set(Object.values(produitsData).map(p => p.origine))];
-        filtreOrigine.innerHTML = '<option value="all">Tous</option>';
-        origines.forEach(origine => {
-            const option = document.createElement('option');
-            option.value = origine;
-            option.textContent = origine;
-            filtreOrigine.appendChild(option);
-        });
+// Création d'une notification
+function afficherNotification(message) {
+    const notif = document.createElement("div");
+    notif.classList.add("notification");
+    notif.textContent = message;
+    document.body.appendChild(notif);
+    setTimeout(() => notif.classList.add("show"), 10);
+    setTimeout(() => {
+        notif.classList.remove("show");
+        setTimeout(() => notif.remove(), 300);
+    }, 1500);
+}
 
-        // Afficher les produits
-        for (let key in produitsData) {
-            const produit = produitsData[key];
-            const produitCarte = document.createElement('div');
-            produitCarte.className = "block";
-            produitCarte.dataset.origine = produit.origine;
-            produitCarte.dataset.name = produit.name;
+// Création d'une carte produit
+function creerCarteProduit(produit) {
+    const div = document.createElement("div");
+    div.classList.add("produit");
+    div.innerHTML = `
+        <img src="${produit.image}" alt="${produit.nom}">
+        <h3>${produit.nom}</h3>
+        <p>${produit.origine}</p>
+        <p class="prix">${produit.prix}</p>
+        <p>${produit.description}</p>
+        <button class="bouton-tester">Tester</button>
+        <button class="bouton-HT">HT</button>
+    `;
 
-            // Structure de la carte
-            produitCarte.innerHTML = `
-                <img src="${produit.image}" alt="${produit.name}">
-                <div class="product-info">
-                    <h2>${produit.name}</h2>
-                    <p>${produit.origine}</p>
-                    <p class="price">${produit.price}</p>
-                    <div class="boutons-container">
-                        <button class="bouton-tester">Tester</button>
-                        <button class="bouton-acheter">Acheter</button>
-                    </div>
-                    <p class="descri">${produit.description}</p>
-                </div>
-            `;
+    const audioTester = new Audio(produit.audioTester);
+    const audioHT = new Audio(produit.audioHT);
+    audios.push(audioTester, audioHT);
 
-            // Gestion des audios pour "Tester"
-            const audioTester = new Audio(produit.audio);
-            audios.push(audioTester);
-            const boutonTester = produitCarte.querySelector('.bouton-tester');
+    const boutonTester = div.querySelector(".bouton-tester");
+    const boutonHT = div.querySelector(".bouton-HT");
 
-            boutonTester.addEventListener('click', () => {
-                if (audioTester.paused) {
-                    audioTester.play();
-                    boutonTester.classList.add('en-lecture');
-                } else {
-                    audioTester.pause();
-                    boutonTester.classList.remove('en-lecture');
-                }
-            });
+    boutonTester.addEventListener("click", () => {
+        audioTester.currentTime = 0;
+        audioTester.play();
+        afficherNotification(`${produit.nom} en test !`);
+    });
 
-            audioTester.addEventListener('ended', () => {
-                boutonTester.classList.remove('en-lecture');
-            });
+    boutonHT.addEventListener("click", () => {
+        audioHT.currentTime = 0;
+        audioHT.play();
+        afficherNotification(`${produit.nom} HT !`);
+    });
 
-            // Gestion du son pour "Acheter"
-            if (produit.audioAchat) {
-                const audioAcheter = new Audio(produit.audioAchat);
-                audios.push(audioAcheter);
-                const boutonAcheter = produitCarte.querySelector('.bouton-acheter');
-                boutonAcheter.addEventListener('click', () => {
-                    audioAcheter.currentTime = 0; // Réinitialise le son
-                    audioAcheter.play();
-                });
-            }
+    return div;
+}
 
-            // Ajout de la carte au DOM
-            zoneProduit.appendChild(produitCarte);
-        }
+// Remplissage des sections avec duplication pour démo
+for (let i = 0; i < 4; i++) sections.promotions.appendChild(creerCarteProduit(produitsExemple[i % 3]));
+for (let i = 0; i < 10; i++) sections.phares.appendChild(creerCarteProduit(produitsExemple[i % 3]));
+for (let i = 0; i < 10; i++) sections["tous-produits"].appendChild(creerCarteProduit(produitsExemple[i % 3]));
 
-        // Gestion du mute
-        const muteBtn = document.getElementById('mute-btn');
-        let isMuted = false;
+// Bouton Mute
+let estMute = false;
+document.getElementById("mute-btn").addEventListener("click", () => {
+    estMute = !estMute;
+    audios.forEach(a => a.muted = estMute);
+    document.getElementById("mute-btn").textContent = estMute ? "Off" : "On";
+});
 
-        // muteBtn.className = "boutonOnOff"; // Classe de base
-        muteBtn.style.backgroundColor = "green"; 
-        muteBtn.style.color = "white";
-        muteBtn.addEventListener('click', () => {
-            isMuted = !isMuted;
+// Flou dynamique et zoom au scroll
+const imageParallax = document.querySelector(".image-parallax");
+const liensCTA = document.querySelectorAll(".call-to-action");
 
-            audios.forEach(a => a.muted = isMuted);
-            muteBtn.textContent = isMuted ? "Off" : "On";
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const hauteurHero = window.innerHeight;
 
-            // Changement de couleur
-            if (isMuted) {
-                muteBtn.style.backgroundColor = "red";   // Couleur quand c’est Off
-                muteBtn.style.color = "white";
-            } else {
-                muteBtn.style.backgroundColor = "green"; // Couleur quand c’est On
-                muteBtn.style.color = "white";
-            }
-        });
+    let blur = Math.min(scrollY / hauteurHero * 5, 5);
+    let scale = 1 + Math.min(scrollY / hauteurHero * 0.05, 0.05);
 
-        // Filtre par origine
-        filtreOrigine.addEventListener('change', () => {
-            const valeur = filtreOrigine.value;
-            const cartes = document.querySelectorAll('.block');
-            cartes.forEach(carte => {
-                carte.style.display = (valeur === 'all' || carte.dataset.origine === valeur) ? 'block' : 'none';
-            });
-        });
+    if(imageParallax) {
+        imageParallax.style.filter = `blur(${blur}px) brightness(0.7)`;
+        imageParallax.style.transform = `scale(${scale})`;
+    }
+});
 
-        // Tri par nom
-        const triNom = document.getElementById('tri-nom');
-        triNom.addEventListener('change', () => {
-            const cartes = Array.from(zoneProduit.children);
-            cartes.sort((a, b) => {
-                const nomA = a.dataset.name.toLowerCase();
-                const nomB = b.dataset.name.toLowerCase();
-                return triNom.value === 'asc' ? nomA.localeCompare(nomB) : nomB.localeCompare(nomA);
-            });
-            cartes.forEach(carte => zoneProduit.appendChild(carte));
-        });
-    })
-    .catch(error => console.error('Erreur JSON :', error));
+// Scroll fluide vers les sections pour les CTA
+liensCTA.forEach(lien => {
+    lien.addEventListener("click", e => {
+        e.preventDefault();
+        const cible = document.querySelector(lien.getAttribute("href"));
+        if(cible) cible.scrollIntoView({ behavior: "smooth" });
+    });
+});
