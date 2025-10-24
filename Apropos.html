@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+
     <header>
         <nav>
             <ul>
@@ -41,7 +43,9 @@
 
 
         <div class="image-parallax-bk">
-            <img class="image-parallax" src="styles/images/Apropos/background-parallax.png" alt="arrière plan de steak">
+            <img class="image-parallax pc" src="styles/images/Apropos/background-parallax.png"
+                alt="arrière plan de steak">
+            <img class="image-parallax mobile" src="styles/images/Apropos/mobile-bk.png" alt="arrière plan de steak">
 
             <div class="block">
                 <div class="contenu-superpose">
@@ -62,7 +66,7 @@
     </header>
 
     <div class="about-us-part">
-        <div class="content-title">
+        <div class="content-title ">
             <h1>Notre Histoire</h1>
             <p>Le secret de nos saveurs réside dans un héritage familial et un engagement inébranlable envers la qualité
                 supérieure.</p>
@@ -71,37 +75,113 @@
         <div class="steak-image">
             <img class="halo" src="styles/images/Apropos/steak.png" alt="steak">
             <div class="box-container">
-                <div class="box-top"></div>
+                <div class="box-top fade-in-scroll "></div>
                 <div class="box-bottom-container">
-                    <div class="box-left"></div>
-                    <div class="box-left"></div>
+                    <div class="box-left fade-in-scroll "></div>
+                    <div class="box-left fade-in-scroll "></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="member-part">
-        <img src="">
-        <p>blabla</p>
+    <div class="location">
+        <img class="m1" src="styles/images/Apropos/placeholder1.png">
+        <img class="m2" src="styles/images/Apropos/placeholder1.png">
+        <img class="m3" src="styles/images/Apropos/placeholder1.png">
     </div>
 
+    <div class="boucher-card-container">
+
+        <div class="card-left">
+            <div class="image-wrapper">
+                <img src="styles/images/Apropos/boucher.png" alt="[Nom du Fondateur] avec des produits frais">
+            </div>
+
+        </div>
+
+        <div class="card-right">
+
+            <h1 class="card-title">
+                Beefsite : L'excellence au service du goût et de votre bien-être
+            </h1>
+
+            <p class="card-description">
+                Nous sélectionnons nos viandes et ingrédients avec la plus grande exigence, auprès d'éleveurs passionnés
+                qui partagent notre engagement pour un produit de qualité supérieure, sans compromis sur l'éthique et le
+                goût.
+            </p>
+
+            <div class="card-slogan">
+                <p>Qualité et Tradition</p>
+                <p>l</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-item item-1">
+                    <span class="feature-number">1</span>
+                    <p>Viande d'origine locale et traçable</p>
+                </div>
+                <div class="feature-item item-2">
+                    <span class="feature-number">2</span>
+                    <p>Richesse en saveurs et nutriments</p>
+                </div>
+                <div class="feature-item item-3">
+                    <span class="feature-number">3</span>
+                    <p>Soutien de l'agriculture responsable</p>
+                </div>
+                <div class="feature-item item-4">
+                    <span class="feature-number">4</span>
+                    <p>Satisfaction garantie à chaque bouchée</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
     <div class="back-contact">
+
         <div class="contact">
-            <h1>Contactez nous</h1>
 
             <form>
-                <label>Nom</label>
-                <input type="text">
-                <label>Email</label>
-                <input type="email">
+                <div class="txt-pres">
+                    <h2>Partenariat ou Demande Spécifique ?</h2>
+                    <p>Contactez notre service dédié.</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Nom</label>
+                        <input type="text">
+                    </div>
+                    <div class="col">
+                        <label>Prénom</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Email</label>
+                        <input type="email">
+                    </div>
+                    <div class="col">
+                        <label>Télephone</label>
+                        <input type="text">
+                    </div>
+                </div>
                 <label>Message</label>
-                <input type="text">
+                <input class="msg" type="text">
+                <input class="submit" type="submit">
             </form>
         </div>
     </div>
 
-
+    <script src="anime.js"></script>
 
 </body>
+
+<footer>
+    <p class="pied">@ By Lili Colombain </p>
+</footer>
 
 </html>

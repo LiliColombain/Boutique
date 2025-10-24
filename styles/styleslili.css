@@ -30,6 +30,46 @@ body {
     color: var(--gris);
 }
 
+li>a {
+    text-wrap: nowrap;
+}
+
+
+@media (max-width: 800px) {
+    nav ul {
+        gap: 1rem;
+        padding: 1rem;
+
+    }
+
+    .contenu-superpose {
+        padding: 0px;
+    }
+
+
+    .pc {
+        opacity: 0;
+    }
+
+    .mobile {
+        opacity: 1;
+        background-size: cover;
+
+
+    }
+
+    .image-parallax-bk {
+        background-color: #00000076;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .mobile {
+        opacity: 0;
+    }
+}
+
 /* ============================== */
 /* BACKGROUND IMAGE */
 /* ============================== */
@@ -39,6 +79,7 @@ body {
     width: 100%;
     overflow: hidden;
     position: relative;
+
 }
 
 
@@ -53,8 +94,9 @@ body {
 
 }
 
+
 .block {
-    background-color: rgba(0, 0, 0, 0.3);
+
     z-index: 10;
     height: 100vh;
     z-index: 9;
@@ -65,7 +107,7 @@ body {
     margin-left: 15%;
     z-index: 10;
     width: 35%;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: left;
     padding-top: 200px;
 
@@ -127,43 +169,45 @@ body {
 }
 
 .box-container {
-    
+
     border-radius: 15px;
-    width: 600px;
+    width: 1000px;
     height: 600px;
     margin-right: 150px;
     margin-top: 100px;
+    margin-left: 10%;
 }
 
 .box-top {
     background-color: #9ACD32;
-    width: 570px;
+    width: 700px;
     height: 250px;
-    margin : 15px;
+    
+
     margin-bottom: 0;
     border-radius: 5px;
 }
 
 .box-bottom-container {
-    
+
     border-radius: 5px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 15px;
-    width: 570px;
+    margin-top: 15px;
+    width: 700px;
     height: 300px;
 }
 
 .box-left {
     background-color: #32cd54;
     border-radius: 5px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 15px;
-   
-    width: 280px;
+
+
+    width: 340px;
     height: 270px;
 }
 
@@ -176,27 +220,233 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    
+    margin-top: 2%;
+    gap: 5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 
 input {
-    width: 250px;
-    background-color: #a4d6af;
-    padding: 10px;
-    border-radius: 10px;
-    border-color: #a4d6af;
-    text-decoration: none;
+    width: 300px;
+    border: none;
+    background: none;
+
+    border-bottom: solid 2px black;
+    border-color: black;
+
+
+
+    outline: none;
+}
+
+label {
+    color: black;
 }
 
 .contact {
-    width: 300px;
-    background-color: palevioletred;
+    width: 700px;
+    height: 450px;
+    background-color: rgb(250, 235, 217);
     margin-left: 40%;
-    
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+
 }
 
 .back-contact {
     width: 100%;
-    height: 300px;
+    height: 900px;
     background-color: var(--brun);
+}
+
+.submit {
+    margin-top: 35px;
+    color: var(--white);
+    border: none;
+    background: var(--vert);
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    padding: 15px;
+    transition: background 0.3s;
+}
+
+.msg {
+    width: 100%;
+}
+
+.txt-pres {
+    margin-bottom: 30px;
+}
+
+.submit:hover {
+    background: var(--rouge);
+}
+
+
+
+
+
+
+
+
+/* ============================== */
+/* PRESENTATION */
+/* ============================== */
+
+.boucher-card-container {
+    width: 100%;
+    height: 600px;
+    background-color: var(--brun);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.card-left {
+    width: 300px;
+    margin-right: 100px;
+    height: 462px;
+    display: flex;
+    background-color: #d8c2c2;
+    margin-left: 150px;
+    border-radius: 10px;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-left:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px #450404;
+}
+
+.card-right {
+    width: 40%;
+    height: 600px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    color: var(--beige);
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    background-color: rgb(144, 148, 144, 0.4);
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    color: var(--beige);
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.feature-number {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-light-green);
+    margin-right: 15px;
+}
+
+.feature-item p {
+    margin: 0;
+}
+
+.location{
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    justify-content: right;
+    align-items: center;
+    gap:15px;
+    margin-bottom: 40px
+}
+
+.m1 {
+    width: 15%;
+    height: 5%;
+}
+
+.m2 {
+    width: 20%;
+    height: 10%;
+}
+
+.m3 {
+    width: 25%;
+    height: 15%;
+}
+
+.pied {
+  text-align: center;
+  color: var(--vert);
+  background-color: #A0522D;
+}
+
+
+
+/* ------------------- DÉFINITION DE L'ANIMATION ------------------- */
+@keyframes fadeInUp {
+    /* L'élément est invisible (0) et décalé vers le bas (20px) */
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    /* L'élément est visible (1) et revient à sa position normale */
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------- APPLICATION ET STYLE DU BLOC ------------------- */
+.content-title {
+    /* Applique l'animation : nom | durée (1s) | fonction (ease-out) | délai (0.3s) | maintient l'état final (forwards) */
+    animation: fadeInUp 1s ease-out 0.3s forwards; 
+    
+    /* État initial : L'élément est invisible avant que l'animation ne commence */
+    opacity: 0; 
+    
+    /* Styles de présentation (centrage, etc.) */
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px; /* Espace sous le bloc */
+    
+    /* Couleurs pour un bon contraste */
+    color: #333; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-title h1 {
+    font-size: 2.5em;
+    color: #385536; /* Exemple de couleur foncée */
+    margin-bottom: 5px;
+}
+
+.content-title p {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
 }
