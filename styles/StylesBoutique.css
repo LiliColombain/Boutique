@@ -33,7 +33,7 @@ h1 {
 }
 
 .sidebar {
-    width: 250px;
+    max-width: 200px;
     padding: 20px;
     background-color: var(--beige);
     border-right: 1px solid #ddd;

@@ -79,10 +79,24 @@ fetch('/Js_Json/DataBoutique.json')
         // Gestion du mute
         const muteBtn = document.getElementById('mute-btn');
         let isMuted = false;
+
+        // muteBtn.className = "boutonOnOff"; // Classe de base
+        muteBtn.style.backgroundColor = "green"; 
+        muteBtn.style.color = "white";
         muteBtn.addEventListener('click', () => {
             isMuted = !isMuted;
+
             audios.forEach(a => a.muted = isMuted);
             muteBtn.textContent = isMuted ? "Off" : "On";
+
+            // Changement de couleur
+            if (isMuted) {
+                muteBtn.style.backgroundColor = "red";   // Couleur quand c’est Off
+                muteBtn.style.color = "white";
+            } else {
+                muteBtn.style.backgroundColor = "green"; // Couleur quand c’est On
+                muteBtn.style.color = "white";
+            }
         });
 
         // Filtre par origine
