@@ -304,6 +304,14 @@ body {
 /* ============================== */
 /* SECTION PRODUITS / RECIPES */
 /* ============================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+}
+
+/* --- Section Produits --- */
 .recipes-section {
   text-align: center;
   padding: 40px 20px;
@@ -311,12 +319,13 @@ body {
   margin: 0 auto;
 }
 
+/* Header/Titre */
 .header {
   margin-bottom: 30px;
 }
 
 .mint-leaf-icon {
-  color: var(--rouge);
+  color: var(--color-primary);
   font-size: 2em;
   display: block;
   margin-bottom: 10px;
@@ -335,6 +344,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* --- Conteneur principal --- */
 .recipes-container {
   display: flex;
   justify-content: center;
@@ -343,6 +353,7 @@ body {
   position: relative;
 }
 
+/* Flèches navigation */
 .nav-arrow {
   background: white;
   border: 1px solid #ddd;
@@ -354,7 +365,7 @@ body {
   cursor: pointer;
   position: absolute;
   z-index: 10;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
   font-weight: bold;
   line-height: 1;
@@ -365,12 +376,14 @@ body {
 
 .left-arrow { left: -20px; }
 .right-arrow { right: -20px; }
+
 .nav-arrow:hover { background-color: #eee; }
 
+/* --- Carte Produit --- */
 .recipe-card {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   width: calc(33.33% - 20px);
   max-width: 350px;
   overflow: hidden;
@@ -393,7 +406,7 @@ body {
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .content {
@@ -401,6 +414,7 @@ body {
   text-align: center;
 }
 
+/* Étoiles et actions */
 .rating-and-actions {
   display: flex;
   justify-content: center;
@@ -441,6 +455,7 @@ body {
   margin: 10px 0 20px 0;
 }
 
+/* Détails (temps, portion, difficulté) */
 .details {
   display: flex;
   justify-content: space-around;
@@ -466,6 +481,7 @@ body {
   color: var(--color-text-light);
 }
 
+/* Points de navigation */
 .nav-dots {
   margin-top: 30px;
 }
@@ -481,8 +497,40 @@ body {
   transition: background-color 0.3s;
 }
 
-.dot.active { background-color: var(--color-primary); }
+.dot.active {
+  background-color: var(--color-primary);
+}
 
+/* Séparateur bas */
+.features-separator {
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
+.features-separator p {
+  font-size: 0.7em;
+  color: var(--color-primary);
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.features-separator h2 {
+  font-size: 1.5em;
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+
+@media (max-width: 900px) {
+  .recipes-container { flex-wrap: wrap; }
+  .recipe-card { width: calc(50% - 20px); margin-bottom: 20px; }
+  .left-arrow, .right-arrow { display: none; }
+}
+
+@media (max-width: 600px) {
+  .recipe-card { width: 90%; max-width: none; }
+}
 /* ============================== */
 /* SECTION SERVICES */
 /* ============================== */
@@ -543,3 +591,112 @@ body {
   .recipe-card { width: 90%; max-width: none; }
 }
 
+
+
+
+
+/* Section Viande / Cartes modernes */
+.section-viande {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  margin: 50px auto;
+}
+
+.cartes-gauche,
+.cartes-droite {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carte {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  padding: 20px;
+  width: 250px;
+  transition: all 0.4s ease;
+  border: 1px solid #eee;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: apparaitre 0.6s forwards;
+}
+
+.carte:nth-child(1) { animation-delay: 0.1s; }
+.carte:nth-child(2) { animation-delay: 0.2s; }
+.carte:nth-child(3) { animation-delay: 0.3s; }
+
+.carte:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: linear-gradient(135deg, #B22222, #A0522D);
+  color: #fff;
+  border: 1px solid #A0522D;
+}
+
+.carte:hover .icone {
+  transform: scale(1.3) rotate(10deg);
+  color: #9ACD32;
+}
+
+.icone {
+  font-size: 36px;
+  color: #B22222;
+  margin-bottom: 10px;
+  transition: transform 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+h3 {
+  color: #B22222;
+  margin-bottom: 8px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+  transition: color 0.3s;
+}
+
+.image-centrale img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@keyframes apparaitre {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .section-viande {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cartes-gauche,
+  .cartes-droite {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .carte {
+    width: 180px;
+  }
+  .image-centrale img {
+    width: 250px;
+  }
+}
+
+  
