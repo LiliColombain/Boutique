@@ -311,6 +311,22 @@ body {
 /* ============================== */
 /* SECTION PRODUITS / RECIPES */
 /* ============================== */
+.entete-parcours {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.entete-parcours h2 {
+  margin-bottom: 15px;
+  color: var(--rouge);
+  font-size: 2.1rem;
+}
+
+.entete-parcours p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--gris);
+}
 
 
 .recipes-section {
@@ -420,7 +436,7 @@ body {
   text-align: center;
 }
 
-/* actions */
+
 .rating-and-actions {
   display: flex;
   justify-content: center;
@@ -497,7 +513,7 @@ body {
   background-color: var(--color-primary);
 }
 
-/* Séparateur bas */
+
 .features-separator {
   margin-top: 50px;
   padding-top: 20px;
