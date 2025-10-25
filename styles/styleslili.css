@@ -87,9 +87,17 @@ li>a {
     position: fixed;
     top: 0;
     left: 0%;
-    min-width: 100%;
-    height: 130%;
-    transform: translate(-10%, -10%);
+    background-size: cover;
+
+
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    
+    min-height: 500px;
+    
+    background-position: center center;
+
     z-index: -1;
 
 }
@@ -174,7 +182,7 @@ li>a {
     width: 1000px;
     height: 600px;
     margin-right: 150px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 10%;
 }
 
@@ -182,7 +190,7 @@ li>a {
     background-color: #9ACD32;
     width: 700px;
     height: 250px;
-    
+
 
     margin-bottom: 0;
     border-radius: 5px;
@@ -195,8 +203,11 @@ li>a {
     justify-content: space-between;
     flex-direction: row;
     margin-top: 15px;
-    width: 700px;
+    width: 760px;
     height: 300px;
+    
+    
+    
 }
 
 .box-left {
@@ -206,7 +217,7 @@ li>a {
     justify-content: space-between;
     flex-direction: row;
 
-
+    
     width: 340px;
     height: 270px;
 }
@@ -257,16 +268,17 @@ label {
     width: 700px;
     height: 450px;
     background-color: rgb(250, 235, 217);
-    margin-left: 40%;
+    
     display: flex;
     justify-content: center;
     border-radius: 10px;
+    margin-left: 30%;
 
 }
 
 .back-contact {
     width: 100%;
-    height: 900px;
+    height: 600px;
     background-color: var(--brun);
 }
 
@@ -312,7 +324,7 @@ label {
     justify-content: space-between;
     display: flex;
     flex-direction: row;
-
+    padding : 40px;
 
 }
 
@@ -373,16 +385,20 @@ label {
     margin: 0;
 }
 
-.location{
+.location {
     display: flex;
     flex-direction: row;
     background-color: whitesmoke;
     justify-content: right;
     align-items: center;
-    gap:15px;
-    margin-bottom: 40px
+    gap: 15px;
+    
+    padding: 40px;
 }
 
+.location div {
+    margin-right: 10em;
+}
 .m1 {
     width: 15%;
     height: 5%;
@@ -399,20 +415,22 @@ label {
 }
 
 .pied {
-  text-align: center;
-  color: var(--vert);
-  background-color: #A0522D;
+    text-align: center;
+    color: var(--vert);
+    background-color: #A0522D;
 }
 
 
 
 /* ------------------- DÉFINITION DE L'ANIMATION ------------------- */
 @keyframes fadeInUp {
+
     /* L'élément est invisible (0) et décalé vers le bas (20px) */
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     /* L'élément est visible (1) et revient à sa position normale */
     to {
         opacity: 1;
@@ -423,24 +441,26 @@ label {
 /* ------------------- APPLICATION ET STYLE DU BLOC ------------------- */
 .content-title {
     /* Applique l'animation : nom | durée (1s) | fonction (ease-out) | délai (0.3s) | maintient l'état final (forwards) */
-    animation: fadeInUp 1s ease-out 0.3s forwards; 
-    
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+
     /* État initial : L'élément est invisible avant que l'animation ne commence */
-    opacity: 0; 
-    
+    opacity: 0;
+
     /* Styles de présentation (centrage, etc.) */
     text-align: center;
     padding: 20px;
-    margin-bottom: 30px; /* Espace sous le bloc */
-    
+    margin-bottom: 30px;
+    /* Espace sous le bloc */
+
     /* Couleurs pour un bon contraste */
-    color: #333; 
+    color: #333;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .content-title h1 {
     font-size: 2.5em;
-    color: #385536; /* Exemple de couleur foncée */
+    color: #385536;
+    /* Exemple de couleur foncée */
     margin-bottom: 5px;
 }
 
@@ -450,3 +470,82 @@ label {
     max-width: 700px;
     margin: 0 auto;
 }
+
+
+
+.box-top {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 40px auto;
+    padding: 30px;
+
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.box-top .txt {
+
+
+    padding-right: 30px;
+}
+
+.box-top h4 {
+    font-size: 1.5em;
+    color: #385536;
+    /* Exemple de couleur foncée */
+    margin-top: 0;
+    margin-bottom: 10px;
+
+}
+
+.box-top p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* ------------------- STYLE DE L'IMAGE ------------------- */
+.box-top img {
+    /* L'image prend 40% de la largeur du bloc */
+
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    /* Coins arrondis pour l'image */
+
+}
+
+.box-left {
+    display: flex;
+    flex-direction: column;
+}
+.box-left h4 {
+    font-size: 1.5em;
+    color: #385536;
+    /* Exemple de couleur foncée */
+    margin-top: 30px;
+    margin-left: 30px;
+    
+
+}
+
+.box-left p {
+    margin: 30px;
+    margin-bottom: 50px;
+    margin-top:0;
+    
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.box-left img {
+    margin-top: 10px;
+}
+
+.p2 {
+    padding-left: 60px;
+}
+
+
