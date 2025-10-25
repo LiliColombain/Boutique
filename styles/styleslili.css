@@ -1,8 +1,8 @@
-
-
 /* ============================== */
 /* ------VARIABLES GLOBALES------ */
 /* ============================== */
+
+
 
 
 :root {
@@ -176,16 +176,16 @@ li>a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    
 }
 
 .box-container {
     display: flex;
-
+    
     flex-direction: column;
     align-items: center;
     margin-left: auto;
-    margin-right: 50px;
+    margin-right:50px;
     max-width: 1200px;
 }
 
@@ -219,7 +219,7 @@ li>a {
     min-width: 300px;
     background-color: var(--color-background);
     border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -340,16 +340,15 @@ li>a {
     background-color: var(--beige);
     display: flex;
     justify-content: center;
-    gap: 15%;
     flex-direction: row;
     align-items: center;
-
+    gap: 15%;
+    
 
 }
 
 .card-left {
-    flex-shrink: 0;
-    /* Empêche de rétrécir trop */
+    flex-shrink: 0; 
     width: 300px;
     max-width: 400px;
     height: 462px;
@@ -368,7 +367,7 @@ li>a {
 
 .card-right {
     flex-grow: 1;
-    max-width: 600px;
+    max-width: 600px; 
     height: auto;
     margin: 0;
     display: flex;
@@ -422,7 +421,8 @@ form {
     display: flex;
     flex-direction: column;
     margin-top: 2%;
-    gap: 5px;
+    gap: 15px; 
+    width: 100%;
 }
 
 .row {
@@ -434,14 +434,15 @@ form {
 .col {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    flex: 1; 
+    margin-bottom: 0
 }
 
 input {
     width: 300px;
     border: none;
     background: none;
-
+    padding: 8px 0;
     border-bottom: solid 2px black;
     border-color: black;
     outline: none;
@@ -449,23 +450,27 @@ input {
 
 label {
     color: black;
+    margin-bottom: 5px;
 }
 
 .contact {
-    width: 700px;
-    height: 450px;
+    max-width: 700px;
+    width: 90%;
+    height: auto;
     background-color: var(--color-background);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: center;
     border-radius: 10px;
-    margin-left: 30%;
+    margin: 0 auto; 
+    padding: 40px 20px;
 
 }
 
 .back-contact {
     width: 100%;
-    height: 600px;
+    height: auto;
+    padding: 50px 0;
     background-color: var(--beige);
 }
 
@@ -476,9 +481,19 @@ label {
     background: var(--vert);
     border: none;
     border-radius: 10px;
-    width: 100px;
+    width: 150px; 
     padding: 15px;
+    align-self: flex-start;
     transition: background 0.3s;
+}
+
+.msg textarea {
+    width: 100%;
+    min-height: 100px;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px;
+    resize: vertical;
 }
 
 .msg {
@@ -506,7 +521,20 @@ label {
 
 
 
+@keyframes fadeInUp {
 
+    /* L'élément est invisible (0) et décalé vers le bas (20px) */
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    /* L'élément est visible (1) et revient à sa position normale */
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
@@ -630,7 +658,6 @@ label {
 
 @media (max-width: 768px) {
 
-
     .contenu-superpose {
         width: 90%;
         margin-left: 5%;
@@ -701,7 +728,6 @@ label {
     }
 
     .box-left {
-        min-width: 100%;
         padding: 0px;
         padding-bottom: 10px;
         padding-top: 10px;
@@ -723,39 +749,65 @@ label {
 
     .global {
         width: 30%;
-
+        
     }
 }
 
 @media (max-width: 768px) {
     .boucher-card-container {
-        flex-direction: column;
-        padding: 40px 20px;
+        flex-direction: column; 
     }
 
     .card-left {
         width: 90%;
-        height: 462px;
-        margin: 0 0 30px 0;
+        height: 462px; 
+        margin: 0 0 30px 0; 
         transition: none;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
-
+    
     .card-left:hover {
         transform: none;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     .card-right {
-        width: 100%;
+        width: 100%; 
         max-width: 90%;
-        text-align: center;
+        text-align: center; 
     }
 
     .feature-grid {
         grid-template-columns: 1fr;
         gap: 10px;
-        margin: 20px auto 0 auto;
-        max-width: 400px;
+        margin: 20px auto 0 auto; 
+        max-width: 400px; 
     }
+}
+
+
+@media (max-width:768px){
+    .contact {
+        width: 95%;
+        padding: 30px 15px; 
+    }
+    
+    .row {
+        flex-direction: column; 
+        
+    }
+
+    input {
+        width: 100%;
+    }
+    
+    .col {
+        flex: none; 
+        margin-bottom: 20px; 
+    }
+
+    .submit {
+        align-self: center;
+    }
+
 }
