@@ -8,15 +8,18 @@ const sections = {
 // Produits de base
 const produitsExemple = [
     { nom: "Steak", origine: "Boeuf", image: "styles/Image/ImageDeSteak.jpg", description: "Steak qualité AAA", prix: "10$", audioTester: "styles/audio/VacheTest.ogg", audioHT: "styles/audio/VacheAchat.ogg" },
-    { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "10$", audioTester: "styles/audio/CochonTester.ogg", audioHT: "styles/audio/CochonAcheter.mp3" },
-    { nom: "Poulet", origine: "Poulet", image: "styles/Image/poulet.jpg", description: "Poulet bien pouleter", prix: "15$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" }
+    { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "13$", audioTester: "styles/audio/CochonTester.ogg", audioHT: "styles/audio/CochonAcheter.mp3" },
+    { nom: "2 Cuisse de Poulet", origine: "Poulet", image: "styles/Image/CuissePoulet.webp", description: "Poulet bien pouleter", prix: "15$", audioTester: "styles/audio/PouleT.ogg", audioHT: "styles/audio/PouleA.ogg" },
+    { nom: "Ribs", origine: "mouton", image: "styles/Image/Mouton.jpeg", description: "2kg de pure mouton", prix: "11$", audioTester: "styles/audio/MoutonT.ogg", audioHT: "styles/audio/MoutonA.ogg" }
+
 ];
 
 // 👉 Tableau spécial pour les promotions
 const promotions = [
         { nom: "Steak", origine: "Boeuf", image: "styles/Image/ImageDeSteak.jpg", description: "Promo du jour", prix: "10$ → 7$", audioTester: "styles/audio/VacheTest.ogg", audioHT: "styles/audio/VacheAchat.ogg" },
     { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "24$ → 14$", audioTester: "styles/audio/CochonTester.ogg", audioHT: "styles/audio/CochonAcheter.mp3" },
-    { nom: "Poulet", origine: "Poulet", image: "styles/Image/poulet.jpg", description: "Poulet bien pouleter", prix: "20$ → 15$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" }
+    { nom: "2 Cuisse de Poulet", origine: "Poulet", image: "styles/Image/CuissePoulet.webp", description: "Poulet bien pouleter", prix: "20$ → 15$", audioTester: "styles/audio/PouleT.ogg", audioHT: "styles/audio/PouleA.ogg" } ,
+    { nom: "Ribs", origine: "mouton", image: "styles/Image/Mouton.jpeg", description: "10kg de pure mouton", prix: " 32$ → 24$", audioTester: "styles/audio/MoutonT.ogg", audioHT: "styles/audio/MoutonA.ogg" }
 ];
 
 // --- Notification ---
@@ -107,6 +110,15 @@ window.addEventListener("scroll", () => {
 
 // --- Scroll fluide ---
 document.querySelectorAll(".call-to-action").forEach(lien => {
+    lien.addEventListener("click", e => {
+        e.preventDefault();
+        const cible = document.querySelector(lien.getAttribute("href"));
+        cible.scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+
+document.querySelectorAll(".normal").forEach(lien => {
     lien.addEventListener("click", e => {
         e.preventDefault();
         const cible = document.querySelector(lien.getAttribute("href"));

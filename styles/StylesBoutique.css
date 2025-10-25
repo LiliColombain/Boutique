@@ -312,6 +312,14 @@ body {
   background-color: var(--vert);
 }
 
+
+h2 {
+    font-size: 2.5em;
+    color: #385536;
+    /* Exemple de couleur foncée */
+    margin-bottom: 5px;
+}
+
 @media (max-width: 768px) {
   .produit {
     width: 45%;
