@@ -154,16 +154,28 @@ window.addEventListener('scroll', () => {
 });
 
 
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
-const container = document.querySelector('.recipes-container');
+const boutons = document.querySelectorAll('.bouton-rond');
 
-const scrollAmount = 320; // largeur approximative d'une carte + gap
+boutons.forEach(bouton => {
+  const popup = bouton.querySelector('.popup-info');
+  const titre = popup.querySelector('.popup-titre');
+  const desc = popup.querySelector('.popup-description');
+  const lien = popup.querySelector('.popup-lien');
+  const fermer = popup.querySelector('.popup-fermer');
 
-leftArrow.addEventListener('click', () => {
-  container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-});
+  bouton.addEventListener('click', (e) => {
+    // Fermer tous les autres pop-ups
+    document.querySelectorAll('.popup-info').forEach(p => p.classList.remove('actif'));
 
-rightArrow.addEventListener('click', () => {
-  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    // Remplir et ouvrir le pop-up du bouton cliqué
+    titre.textContent = bouton.dataset.titre;
+    desc.textContent = bouton.dataset.description;
+    lien.href = bouton.dataset.lien;
+    popup.classList.add('actif');
+  });
+
+  fermer.addEventListener('click', (e) => {
+    e.stopPropagation(); // éviter la propagation du clic au bouton
+    popup.classList.remove('actif');
+  });
 });
