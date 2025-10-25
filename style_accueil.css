@@ -451,7 +451,7 @@ body {
   margin: 10px 0 20px 0;
 }
 
-/* Détails (temps, portion, difficulté) */
+
 .details {
   display: flex;
   justify-content: space-around;
@@ -477,7 +477,7 @@ body {
   color: var(--color-text-light);
 }
 
-/* Points de navigation */
+
 .nav-dots {
   margin-top: 30px;
 }
@@ -643,13 +643,13 @@ body {
   display: flex;
   animation: bouger 3s ease-in-out infinite;
   transition: transform 0.3s;
-  margin-top: 200px;
+  margin-top: 95px;
 }
 
 .central img {
   border-radius: 15px;
   width: 400px;
-  height: 330px;
+  height: 500px;
 }
 
 .central:hover {
