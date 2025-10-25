@@ -543,10 +543,6 @@ body {
 }
 
 
-
-
-
-
  .parcours-container {
   display: flex;
   justify-content: space-between;
@@ -937,7 +933,7 @@ body {
 
 
 .retour-haut {
-  position: relative;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   background: var(--rouge);
@@ -1021,7 +1017,7 @@ body {
 
    
     .conteneur-carrousel {
-        width: 95%;
+        width: 99%;
         max-width: 1300px;
         margin: 0 auto; 
         position: relative; 
