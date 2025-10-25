@@ -5,71 +5,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique</title>
-    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/StylesBoutique.css">
+    <link href="styles/header.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <!-- ta navbar existante - on ne la touche pas -->
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="Boutique.html">Boutique</a></li>
-                <li><a href="Panier.html">Panier</a></li>
-                <li><a href="Apropos.html">A propos</a></li>
+                <li>
+                    <a href="index.html">Accueil</a>
+                    <link rel="stylesheet"
+                        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+                </li>
+                <li>
+                    <a href="Boutique.html">Boutique</a>
+                    <link rel="stylesheet"
+                        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=store" />
+                </li>
+                <li>
+                    <a href="Panier.html">Panier</a>
+                    <link rel="stylesheet"
+                        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
+                    <link rel="stylesheet"
+                        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=info" />
+                </li>
+                <li>
+                    <a href="Apropos.html">A propos</a>
+                </li>
             </ul>
         </nav>
-    </header>
 
-    <div class="about-us-part">
-        <div class="content-title">
-            <h1>Notre Histoire</h1>
-            <p>Le secret de nos saveurs réside dans un héritage familial et un engagement inébranlable envers la qualité
-                supérieure.</p>
-        </div>
+        <section class="KINGGGGGG">
+            <div class="image-parallax-bk">
+                <img class="image-parallax" src="styles/images/Apropos/background-parallax.png"
+                    alt="arrière-plan de viande">
+                <div class="block">
+                    <div class="contenu-superpose">
+                        <h1>'Art de la Boucherie, Découvrez nos pièces d'exception</h1>
+                        <p>roduits traçables, maturés, sélectionnés — goût & excellence.</p>
 
-        <div class="steak-image">
-            <img class="halo" src="styles/images/Apropos/steak.png" alt="steak">
-            <div class="box-container">
-                <div class="box-top"></div>
-                <div class="box-bottom-container">
-                    <div class="box-left"></div>
-                    <div class="box-left"></div>
+                        <div class="box">
+                            <a class="call-to-action" href="#promotions">Voir les promotions →</a>
+                            <a class="normal" href="#tous-produits">Voir tout →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+        </section>
 
-    <section class="filtres">
-        <button id="mute-btn">On</button>
-        <select id="filtre-origine">
-            <option value="all">Toutes origines</option>
-            <option value="Boeuf">Boeuf</option>
-            <option value="Cochon">Cochon</option>
-            <option value="Poulet">Poulet</option>
-        </select>
-        <select id="tri-prix">
-            <option value="asc">Prix croissant</option>
-            <option value="desc">Prix décroissant</option>
-        </select>
-    </section>
 
-    <h2>Promotions</h2>
-    <div class="section-produits promotions"></div>
 
-    <h2>Produits phares</h2>
-    <div class="section-produits phares"></div>
+        <section class="filtres">
+            <button id="mute-btn">On</button>
+            <select id="filtre-origine">
+                <option value="all">Toutes origines</option>
+                <option value="Boeuf">Boeuf</option>
+                <option value="Cochon">Cochon</option>
+                <option value="Poulet">Poulet</option>
+            </select>
+            <select id="tri-prix">
+                <option value="asc">Prix croissant</option>
+                <option value="desc">Prix décroissant</option>
+            </select>
+        </section>
 
-    <h2>Tous les produits</h2>
-    <div class="section-produits tous-produits"></div>
+        <h2 id="promotions">Promotions</h2>
+        <div class="section-produits promotions"></div>
 
-    <footer>
-        <hr>
-        <p>Réalisé par le GOATTTTTTT</p>
-    </footer>
+        <h2>Produits phares</h2>
+        <div class="section-produits phares"></div>
 
-    <script src="Js_Json/JsBoutique.js"></script>
+        <h2 id="tous-produits">Tous les produits</h2>
+        <div class="section-produits tous-produits"></div>
+
+        <footer class="pied-page">
+            <h2>Commencez votre voyage vers un <span>meilleur bœuf</span></h2>
+
+            <div class="conteneur-pied">
+                <div class="contact-pied">
+                    <p><span class="material-symbols-outlined">location_on</span> 27 Rue de la Viande, Belfort, France
+                    </p>
+                    <p><span class="material-symbols-outlined">mail</span> contact@beefsite.fr</p>
+                    <p><span class="material-symbols-outlined">call</span> +33 6 12 34 56 78</p>
+                    <div class="reseaux">
+                        <a href="#"><span class="material-symbols-outlined">language</span></a>
+                        <a href="#"><span class="material-symbols-outlined">chat</span></a>
+                        <a href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+                    </div>
+                </div>
+
+                <div class="liens-pied">
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Nos valeurs</a></li>
+                        <li><a href="#">Historique</a></li>
+                        <li><a href="#">Prix & Distinctions</a></li>
+                    </ul>
+
+                    <div class="carte-pied">
+                        <iframe src="https://www.google.com/maps?q=Eiffel+Tower,+Paris,+France&output=embed"
+                            allowfullscreen="" title="Carte"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bas-pied">
+                © 2025 <span>BeefSite by Tie Rachida Hebie</span>. Tous droits réservés.
+            </div>
+        </footer>
+
+        <script src="Js_Json/JsBoutique.js"></script>
 </body>
 
 </html>

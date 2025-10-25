@@ -5,14 +5,21 @@ const sections = {
     "tous-produits": document.querySelector(".tous-produits")
 };
 
-// Exemple de produits (tu peux dupliquer/modifier comme tu veux)
+// Produits de base
 const produitsExemple = [
-    { nom: "Steak", origine: "Boeuf", image: "styles/Image/ImageDeSteak.jpg", description: "Steak qualité AAA", prix: "10$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" },
-    { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "10$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" },
+    { nom: "Steak", origine: "Boeuf", image: "styles/Image/ImageDeSteak.jpg", description: "Steak qualité AAA", prix: "10$", audioTester: "styles/audio/VacheTest.ogg", audioHT: "styles/audio/VacheAchat.ogg" },
+    { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "10$", audioTester: "styles/audio/CochonTester.ogg", audioHT: "styles/audio/CochonAcheter.mp3" },
     { nom: "Poulet", origine: "Poulet", image: "styles/Image/poulet.jpg", description: "Poulet bien pouleter", prix: "15$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" }
 ];
 
-// Création d'une notification
+// 👉 Tableau spécial pour les promotions
+const promotions = [
+        { nom: "Steak", origine: "Boeuf", image: "styles/Image/ImageDeSteak.jpg", description: "Promo du jour", prix: "10$ → 7$", audioTester: "styles/audio/VacheTest.ogg", audioHT: "styles/audio/VacheAchat.ogg" },
+    { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "24$ → 14$", audioTester: "styles/audio/CochonTester.ogg", audioHT: "styles/audio/CochonAcheter.mp3" },
+    { nom: "Poulet", origine: "Poulet", image: "styles/Image/poulet.jpg", description: "Poulet bien pouleter", prix: "20$ → 15$", audioTester: "styles/audio/CochonTester.mp3", audioHT: "styles/audio/CochonAcheter.mp3" }
+];
+
+// --- Notification ---
 function afficherNotification(message) {
     const notif = document.createElement("div");
     notif.classList.add("notification");
@@ -25,7 +32,7 @@ function afficherNotification(message) {
     }, 1500);
 }
 
-// Création d'une carte produit
+// --- Création cartes produits ---
 function creerCarteProduit(produit) {
     const div = document.createElement("div");
     div.classList.add("produit");
@@ -36,37 +43,46 @@ function creerCarteProduit(produit) {
         <p class="prix">${produit.prix}</p>
         <p>${produit.description}</p>
         <button class="bouton-tester">Tester</button>
-        <button class="bouton-HT">HT</button>
+        <button class="bouton-HT">Acheter</button>
     `;
 
     const audioTester = new Audio(produit.audioTester);
     const audioHT = new Audio(produit.audioHT);
     audios.push(audioTester, audioHT);
 
-    const boutonTester = div.querySelector(".bouton-tester");
-    const boutonHT = div.querySelector(".bouton-HT");
-
-    boutonTester.addEventListener("click", () => {
+    div.querySelector(".bouton-tester").addEventListener("click", () => {
         audioTester.currentTime = 0;
         audioTester.play();
         afficherNotification(`${produit.nom} en test !`);
     });
 
-    boutonHT.addEventListener("click", () => {
+    div.querySelector(".bouton-HT").addEventListener("click", () => {
         audioHT.currentTime = 0;
         audioHT.play();
-        afficherNotification(`${produit.nom} HT !`);
+        afficherNotification(`${produit.nom} acheté !`);
     });
 
     return div;
 }
 
-// Remplissage des sections avec duplication pour démo
-for (let i = 0; i < 4; i++) sections.promotions.appendChild(creerCarteProduit(produitsExemple[i % 3]));
-for (let i = 0; i < 10; i++) sections.phares.appendChild(creerCarteProduit(produitsExemple[i % 3]));
-for (let i = 0; i < 10; i++) sections["tous-produits"].appendChild(creerCarteProduit(produitsExemple[i % 3]));
+// --- Remplissage sections ---
+// Promotions → utilise le tableau dédié
+for (let i = 0; i < 4; i++) {
+    const promo = promotions[i % promotions.length]; // alterne dans le tableau
+    sections.promotions.appendChild(creerCarteProduit(promo));
+}
 
-// Bouton Mute
+// Produits phares
+for (let i = 0; i < 6; i++) {
+    sections.phares.appendChild(creerCarteProduit(produitsExemple[i % produitsExemple.length]));
+}
+
+// Tous les produits
+for (let i = 0; i < 10; i++) {
+    sections["tous-produits"].appendChild(creerCarteProduit(produitsExemple[i % produitsExemple.length]));
+}
+
+// --- Bouton Mute ---
 let estMute = false;
 document.getElementById("mute-btn").addEventListener("click", () => {
     estMute = !estMute;
@@ -74,10 +90,8 @@ document.getElementById("mute-btn").addEventListener("click", () => {
     document.getElementById("mute-btn").textContent = estMute ? "Off" : "On";
 });
 
-// Flou dynamique et zoom au scroll
+// --- Flou dynamique sur scroll ---
 const imageParallax = document.querySelector(".image-parallax");
-const liensCTA = document.querySelectorAll(".call-to-action");
-
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
     const hauteurHero = window.innerHeight;
@@ -85,17 +99,17 @@ window.addEventListener("scroll", () => {
     let blur = Math.min(scrollY / hauteurHero * 5, 5);
     let scale = 1 + Math.min(scrollY / hauteurHero * 0.05, 0.05);
 
-    if(imageParallax) {
+    if (imageParallax) {
         imageParallax.style.filter = `blur(${blur}px) brightness(0.7)`;
         imageParallax.style.transform = `scale(${scale})`;
     }
 });
 
-// Scroll fluide vers les sections pour les CTA
-liensCTA.forEach(lien => {
+// --- Scroll fluide ---
+document.querySelectorAll(".call-to-action").forEach(lien => {
     lien.addEventListener("click", e => {
         e.preventDefault();
         const cible = document.querySelector(lien.getAttribute("href"));
-        if(cible) cible.scrollIntoView({ behavior: "smooth" });
+        cible.scrollIntoView({ behavior: "smooth" });
     });
 });
