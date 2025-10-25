@@ -133,8 +133,6 @@ li>a {
 }
 
 .content-title {
-    animation: fadeInUp 1s ease-out 0.3s forwards;
-    opacity: 0;
     text-align: center;
     padding: 30px 20px 20px 20px;
     margin: 0 auto 30px auto;
@@ -171,21 +169,20 @@ li>a {
 }
 
 
-
 .steak-image {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
 }
 
 .box-container {
     display: flex;
-    
+
     flex-direction: column;
     align-items: center;
     margin-left: auto;
-    margin-right:50px;
+    margin-right: 50px;
     max-width: 1200px;
 }
 
@@ -219,7 +216,7 @@ li>a {
     min-width: 300px;
     background-color: var(--color-background);
     border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -343,12 +340,12 @@ li>a {
     flex-direction: row;
     align-items: center;
     gap: 15%;
-    
+
 
 }
 
 .card-left {
-    flex-shrink: 0; 
+    flex-shrink: 0;
     width: 300px;
     max-width: 400px;
     height: 462px;
@@ -367,7 +364,7 @@ li>a {
 
 .card-right {
     flex-grow: 1;
-    max-width: 600px; 
+    max-width: 600px;
     height: auto;
     margin: 0;
     display: flex;
@@ -421,7 +418,7 @@ form {
     display: flex;
     flex-direction: column;
     margin-top: 2%;
-    gap: 15px; 
+    gap: 15px;
     width: 100%;
 }
 
@@ -434,7 +431,7 @@ form {
 .col {
     display: flex;
     flex-direction: column;
-    flex: 1; 
+    flex: 1;
     margin-bottom: 0
 }
 
@@ -462,7 +459,7 @@ label {
     display: flex;
     justify-content: center;
     border-radius: 10px;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 40px 20px;
 
 }
@@ -481,7 +478,7 @@ label {
     background: var(--vert);
     border: none;
     border-radius: 10px;
-    width: 150px; 
+    width: 150px;
     padding: 15px;
     align-self: flex-start;
     transition: background 0.3s;
@@ -521,20 +518,7 @@ label {
 
 
 
-@keyframes fadeInUp {
 
-    /* L'élément est invisible (0) et décalé vers le bas (20px) */
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    /* L'élément est visible (1) et revient à sa position normale */
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 
@@ -556,7 +540,6 @@ label {
     box-shadow: var(--shadow);
 }
 
-
 .pied-page h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -568,14 +551,12 @@ label {
     color: var(--rouge);
 }
 
-
 .conteneur-pied {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 
 .contact-pied {
     flex: 1 1 250px;
@@ -593,7 +574,6 @@ label {
     font-size: 22px;
     margin-right: 10px;
 }
-
 
 .liens-pied {
     display: flex;
@@ -621,14 +601,12 @@ label {
     color: var(--vert);
 }
 
-
 .carte-pied iframe {
     border: 0;
     width: 500px;
     height: 220px;
     border-radius: 8px;
 }
-
 
 .bas-pied {
     margin-top: 40px;
@@ -643,6 +621,48 @@ label {
     color: var(--rouge);
     font-weight: 600;
 }
+
+.retour-haut {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: var(--rouge);
+    color: var(--white);
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: var(--shadow);
+}
+
+.retour-haut:hover {
+    background: var(--vert);
+}
+
+.reseaux {
+    margin-top: 20px;
+}
+
+.reseaux a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: var(--shadow);
+}
+
+.reseaux a:hover {
+    background-color: var(--vert);
+}
+
 
 
 
@@ -749,61 +769,61 @@ label {
 
     .global {
         width: 30%;
-        
+
     }
 }
 
 @media (max-width: 768px) {
     .boucher-card-container {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .card-left {
         width: 90%;
-        height: 462px; 
-        margin: 0 0 30px 0; 
+        height: 462px;
+        margin: 0 0 30px 0;
         transition: none;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
-    
+
     .card-left:hover {
         transform: none;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     .card-right {
-        width: 100%; 
+        width: 100%;
         max-width: 90%;
-        text-align: center; 
+        text-align: center;
     }
 
     .feature-grid {
         grid-template-columns: 1fr;
         gap: 10px;
-        margin: 20px auto 0 auto; 
-        max-width: 400px; 
+        margin: 20px auto 0 auto;
+        max-width: 400px;
     }
 }
 
 
-@media (max-width:768px){
+@media (max-width:768px) {
     .contact {
         width: 95%;
-        padding: 30px 15px; 
+        padding: 30px 15px;
     }
-    
+
     .row {
-        flex-direction: column; 
-        
+        flex-direction: column;
+
     }
 
     input {
         width: 100%;
     }
-    
+
     .col {
-        flex: none; 
-        margin-bottom: 20px; 
+        flex: none;
+        margin-bottom: 20px;
     }
 
     .submit {
