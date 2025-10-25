@@ -1,34 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-        <link rel="stylesheet" href="styles/header.css">
-    <title>A propos</title>
-</head>
-<body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panier</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/style_panier.css" />
+  </head>
+
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Accueil</a>
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
-                </li>
-                <li>
-                    <a href="Boutique.html">Boutique</a>
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=store" />
-                </li>
-                <li>
-                    <a href="Panier.html">Panier</a>
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=info" />
-                </li>
-                <li>
-                    <a href="Apropos.html">A propos</a>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Boutique.html">Boutique</a></li>
+          <li><a href="Panier.html">Panier</a></li>
+          <li><a href="Apropos.html">À propos</a></li>
+        </ul>
+      </nav>
     </header>
-</body>
+
+    <div class="container1">
+      <h2>Votre panier</h2>
+
+      <div class="cart-item">
+        <img src="styles/Image/saucisse.jpg" alt="saucisse" />
+        <div class="cart-item-info">
+          <h3>Saucisse</h3>
+          <p>Viande blanche locale</p>
+          <p>Quantité : 2</p>
+        </div>
+        <div class="cart-item-price">24,00 €</div>
+      </div>
+
+      <div class="cart-item">
+        <img src="styles/Image/poulet.jpg" alt="Poulet fermier" />
+        <div class="cart-item-info">
+          <h3>Poulet fermier</h3>
+          <p>Élevé en plein air</p>
+          <p>Quantité : 1</p>
+        </div>
+        <div class="cart-item-price">12,50 €</div>
+      </div>
+
+      <div class="cart-item">
+        <img src="styles/Image/ImageDeSteak.jpg" alt="steak" />
+        <div class="cart-item-info">
+          <h3>Steak de boeuf</h3>
+          <p>Délicieusement parfumé</p>
+          <p>Quantité : 3</p>
+        </div>
+        <div class="cart-item-price">18,90 €</div>
+      </div>
+
+      <div class="total">Total : 55,40 €</div>
+
+      <div class="actions">
+        <a href="#" class="btn">Procéder au paiement</a>
+      </div>
+    </div>
+
+    <div class="container-panier">
+      <h2>Produits phares</h2>
+      <div class="panier-produits">
+        <div class="produit">
+          <img src="styles/Image/CoteDePorc.jpg" alt="Produit 1" />
+          <h3>Côte de porc</h3>
+          <p class="prix">19,99 €</p>
+          <a href="Boutique.html" class="btn-panier">Acheter</a>
+        </div>
+
+        <div class="produit">
+          <img src="styles/Image/ImageDeSteak.jpg" alt="Produit 2" />
+          <h3>Steak de boeuf</h3>
+          <p class="prix">24,99 €</p>
+          <a href="Boutique.html" class="btn-panier">Acheter</a>
+        </div>
+
+        <div class="produit">
+          <img src="styles/Image/poulet.jpg" alt="Produit 3" />
+          <h3>Poulet</h3>
+          <p class="prix">14,99 €</p>
+          <a href="Boutique.html" class="btn-panier">Acheter</a>
+        </div>
+      </div>
+
+      <div class="en-savoir-plus">
+        <a href="Apropos.html" class="btn-en-savoir-plus">En savoir plus</a>
+      </div>
+    </div>
+  </body>
 </html>
