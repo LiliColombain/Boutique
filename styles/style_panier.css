@@ -262,3 +262,10 @@ h2 {
     color: var(--rouge);
     font-weight: 600;
 }
+
+@media (max-width: 750px) {
+    .carte-pied iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
