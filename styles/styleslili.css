@@ -221,6 +221,7 @@ li>a {
     flex-direction: column;
     padding: 20px;
     z-index: 1;
+    transition: transform 0.5s ease-in-out;
 }
 
 .box-top {
@@ -231,6 +232,12 @@ li>a {
     margin: 40px auto;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.5s ease-in-out;
+}
+
+.box-top:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px #3d04046d;
 }
 
 .box-top .txt {
@@ -267,6 +274,11 @@ li>a {
     font-size: 1em;
     line-height: 1.6;
     margin: 10px 0;
+}
+
+.box-left:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px #3d04046d;
 }
 
 .box-left img {
@@ -359,7 +371,7 @@ li>a {
 
 .card-left:hover {
     transform: scale(1.02);
-    box-shadow: 0 10px 20px #450404;
+    box-shadow: 0 10px 20px #3d04046d;
 }
 
 .card-right {
@@ -504,20 +516,6 @@ label {
 .submit:hover {
     background: var(--rouge);
 }
-
-
-
-
-
-
-/* ============================== */
-/* ---------ANIMATIONS----------- */
-/* ============================== */
-
-
-
-
-
 
 
 
