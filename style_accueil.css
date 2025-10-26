@@ -770,22 +770,21 @@ body {
     .element-service { width: calc(100% / 4); }
 }
 
-@media (max-width: 992px) {
-    .element-service { width: calc(100% / 3); }
-    .bande-services { min-height: 220px; height: 250px; }
+@media (max-width: 990px) {
+    .element-service {
+       width: calc(100% / 3); }
+    .bande-services { 
+      min-height: 220px; 
+      height: 250px; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 765px) {
     .element-service { width: calc(100% / 2); }
-    .bande-services { min-height: 200px; height: 230px; }
+    .bande-services {
+       min-height: 200px;
+       height: 230px; }
 }
 
-@media (max-width: 576px) {
-    .element-service { width: 90%; margin: 0 auto; }
-    .bande-services { flex-direction: column; animation: none; height: auto; }
-    .bande-services:hover { animation-play-state: paused; }
-    .conteneur-carrousel { padding: 20px 0; }
-}
 /* ============================== */
 /* CARTE VISITE DES PAGES ET POPUP*/
 /* ============================== */
