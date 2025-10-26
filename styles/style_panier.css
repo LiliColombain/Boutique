@@ -170,3 +170,94 @@ h2 {
 .btn-en-savoir-plus:hover {
   background-color: #9acd32;
 }
+
+.pied-page {
+    background-color: var(--gris);
+    color: var(--beige);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding: 60px 10px 0 10px;
+    box-shadow: var(--shadow);
+}
+
+.pied-page h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+.pied-page h2 span {
+    color: var(--rouge);
+}
+
+.conteneur-pied {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-pied {
+    flex: 1 1 250px;
+}
+
+.contact-pied p {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    color: var(--beige);
+}
+
+.contact-pied .material-symbols-outlined {
+    color: var(--rouge);
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.liens-pied {
+    display: flex;
+    flex: 2 1 500px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.liens-pied ul {
+    list-style: none;
+    padding: 0;
+}
+
+.liens-pied li {
+    margin: 8px 0;
+}
+
+.liens-pied a {
+    color: var(--beige);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.liens-pied a:hover {
+    color: var(--vert);
+}
+
+.carte-pied iframe {
+    border: 0;
+    width: 500px;
+    height: 220px;
+    border-radius: 8px;
+}
+
+.bas-pied {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--beige);
+}
+
+.bas-pied span {
+    color: var(--rouge);
+    font-weight: 600;
+}
