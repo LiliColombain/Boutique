@@ -185,10 +185,12 @@ h2 {
     font-weight: 700;
     margin-bottom: 30px;
     color: var(--white);
+    text-align: left;
 }
 
 .pied-page h2 span {
     color: var(--rouge);
+    text-align: left;
 }
 
 .conteneur-pied {

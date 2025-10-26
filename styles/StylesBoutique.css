@@ -190,6 +190,7 @@ body {
     position: relative;
     padding: 60px 10px 0 10px; 
     box-shadow: var(--shadow);
+    text-align: left;
 }
 
 .pied-page h2 {
@@ -197,10 +198,12 @@ body {
     font-weight: 700;
     margin-bottom: 30px;
     color: var(--white);
+    text-align: left;
 }
 
 .pied-page h2 span {
     color: var(--rouge);
+    text-align: left;
 }
 
 .conteneur-pied {
