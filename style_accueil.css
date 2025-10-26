@@ -1062,3 +1062,9 @@ body {
         height: 200px;
     }
 }
+    .retour-haut {
+        right: 10px;
+        bottom: 10px;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
