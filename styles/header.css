@@ -8,17 +8,6 @@
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
- /*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--beige);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: "Poppins", sans-serif;
-} */
-
 
 header {
     position: fixed;     
@@ -70,3 +59,4 @@ nav ul li a:hover {
     color: var(--rouge);
     text-shadow: 0 0 10px rgba(174, 228, 255, 0.8);
 }
+

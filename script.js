@@ -97,3 +97,4 @@ boutons.forEach(bouton => {
     popup.classList.remove('actif');
   });
 });
+

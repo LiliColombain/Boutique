@@ -125,3 +125,4 @@ document.querySelectorAll(".normal").forEach(lien => {
         cible.scrollIntoView({ behavior: "smooth" });
     });
 });
+
