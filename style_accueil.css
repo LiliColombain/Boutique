@@ -509,26 +509,6 @@ body {
   color: var(--color-text-light);
 }
 
-.nav-dots {
-  margin-top: 30px;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: var(--color-primary);
-}
-
-
 @media (max-width: 900px) {
   .recipes-container { flex-wrap: wrap; }
   .recipe-card { width: calc(50% - 20px); margin-bottom: 20px; }
