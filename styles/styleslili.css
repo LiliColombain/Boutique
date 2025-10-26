@@ -622,46 +622,8 @@ label {
     font-weight: 600;
 }
 
-.retour-haut {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: var(--rouge);
-    color: var(--white);
-    padding: 10px 12px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: 0.3s;
-    box-shadow: var(--shadow);
-}
 
-.retour-haut:hover {
-    background: var(--vert);
-}
 
-.reseaux {
-    margin-top: 20px;
-}
-
-.reseaux a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: 0.3s;
-    box-shadow: var(--shadow);
-}
-
-.reseaux a:hover {
-    background-color: var(--vert);
-}
 
 
 

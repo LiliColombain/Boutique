@@ -180,136 +180,98 @@ body {
 }
 
 
+/* ============================== */
+/* FOOTER / PIED DE PAGE */
+/* ============================== */
 .pied-page {
-  background-color: var(--gris);
-  color: var(--beige);
-  font-family: "Poppins", sans-serif;
-  position: relative;
-  padding: 60px 10px 0 10px;
-  box-shadow: var(--shadow);
+    background-color: var(--gris);
+    color: var(--beige);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding: 60px 10px 0 10px; 
+    box-shadow: var(--shadow);
 }
 
 .pied-page h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--white);
 }
 
 .pied-page h2 span {
-  color: var(--rouge);
+    color: var(--rouge);
 }
 
 .conteneur-pied {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-pied {
-  flex: 1 1 250px;
+    flex: 1 1 250px;
 }
 
 .contact-pied p {
-  margin: 12px 0;
-  display: flex;
-  align-items: center;
-  color: var(--beige);
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    color: var(--beige);
 }
 
 .contact-pied .material-symbols-outlined {
-  color: var(--rouge);
-  font-size: 22px;
-  margin-right: 10px;
+    color: var(--rouge);
+    font-size: 22px;
+    margin-right: 10px;
 }
 
 .liens-pied {
-  display: flex;
-  flex: 2 1 500px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    flex: 2 1 500px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .liens-pied ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .liens-pied li {
-  margin: 8px 0;
+    margin: 8px 0;
 }
 
 .liens-pied a {
-  color: var(--beige);
-  text-decoration: none;
-  transition: 0.3s;
+    color: var(--beige);
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .liens-pied a:hover {
-  color: var(--vert);
+    color: var(--vert);
 }
 
 .carte-pied iframe {
-  border: 0;
-  width: 500px;
-  height: 220px;
-  border-radius: 8px;
+    border: 0;
+    width: 500px;
+    height: 220px;
+    border-radius: 8px;
 }
 
 .bas-pied {
-  margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 25px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--beige);
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--beige);
 }
 
 .bas-pied span {
-  color: var(--rouge);
-  font-weight: 600;
-}
-
-.retour-haut {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: var(--rouge);
-  color: var(--white);
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: 0.3s;
-  box-shadow: var(--shadow);
-}
-
-.retour-haut:hover {
-  background: var(--vert);
-}
-
-.reseaux {
-  margin-top: 20px;
-}
-
-.reseaux a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: 0.3s;
-  box-shadow: var(--shadow);
-}
-
-.reseaux a:hover {
-  background-color: var(--vert);
+    color: var(--rouge);
+    font-weight: 600;
 }
 
 
