@@ -1,6 +1,6 @@
 # ProjetDevWeb
 
-Site de vente de nourriture avec bruitage pour une experience immersive
+Site de vente de viande avec bruitage pour une experience immersive
 
 -La page d'accueil a été réalisée par Tié Rachida Hébié
 
