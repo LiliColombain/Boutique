@@ -16,10 +16,10 @@ const produitsExemple = [
 
 // 👉 Tableau spécial pour les promotions
 const promotions = [
-        { nom: "Steak", origine: "Boeuf", image: "styles/Image/ImageDeSteak.jpg", description: "Promo du jour", prix: "10$ → 7$", audioTester: "styles/audio/VacheTest.ogg", audioHT: "styles/audio/VacheAchat.ogg" },
-    { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "24$ → 14$", audioTester: "styles/audio/CochonTester.ogg", audioHT: "styles/audio/CochonAcheter.mp3" },
-    { nom: "2 Cuisse de Poulet", origine: "Poulet", image: "styles/Image/CuissePoulet.webp", description: "Poulet bien pouleter", prix: "20$ → 15$", audioTester: "styles/audio/PouleT.ogg", audioHT: "styles/audio/PouleA.ogg" } ,
-    { nom: "Ribs", origine: "mouton", image: "styles/Image/Mouton.jpeg", description: "10kg de pure mouton", prix: " 32$ → 24$", audioTester: "styles/audio/MoutonT.ogg", audioHT: "styles/audio/MoutonA.ogg" }
+        { nom: "Steak", origine: "Boeuf", image: "styles/Image/ImageDeSteak.jpg", description: "Promo du jour", prix: "10$ → 7$", audioTester: "styles/Audio/VacheTest.ogg", audioHT: "styles/Audio/VacheAchat.ogg" },
+    { nom: "Saucisse", origine: "Cochon", image: "styles/Image/saucisse.jpg", description: "Saucisse basic", prix: "24$ → 14$", audioTester: "styles/Audio/CochonTester.ogg", audioHT: "styles/Audio/CochonAcheter.mp3" },
+    { nom: "2 Cuisse de Poulet", origine: "Poulet", image: "styles/Image/CuissePoulet.webp", description: "Poulet bien pouleter", prix: "20$ → 15$", audioTester: "styles/Audio/PouleT.ogg", audioHT: "styles/Audio/PouleA.ogg" } ,
+    { nom: "Ribs", origine: "mouton", image: "styles/Image/Mouton.jpeg", description: "10kg de pure mouton", prix: " 32$ → 24$", audioTester: "styles/Audio/MoutonT.ogg", audioHT: "styles/Audio/MoutonA.ogg" }
 ];
 
 // --- Notification ---
